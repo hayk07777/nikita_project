@@ -1,0 +1,46 @@
+.contain__gift{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 77px;
+    flex-wrap: wrap;
+
+}
+
+.text__part{
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+    gap: 30px;
+}
+
+.qayl1{
+    background-color: #3675D9;
+    width: 64px;
+    border-radius: 17px;
+text-align: center;    
+    color: #fff;
+}
+/* .learn__more--bt{
+    height: 48px;
+    width: 180px;
+    color:#3675D9 ;
+    border: solid 1px #3675D9 ;
+    border-radius: 5px;
+    background-color: #fff;
+} */
+.learn__more--bt {
+    padding: 12px 35px;
+    border: 1px solid #3675D9;
+    background: white;
+    color: #3675D9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.learn__more--bt:hover {
+    background: #3675D9;
+    color: white;
+}

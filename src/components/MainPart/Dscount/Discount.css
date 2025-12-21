@@ -1,0 +1,46 @@
+.discount__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 74px;
+    flex-wrap: wrap;
+}
+.img__boy{
+ max-width: 620px;
+ max-height: 572px;   
+}
+.text__contain{
+    display: flex;
+    flex-direction: column;
+    line-height: 27px;
+    gap: 30px;
+}
+.qayls{
+    background-color: #00BA85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 28px;
+    border-radius: 17px;
+text-align: center;    
+    color: #fff;
+}
+.about__discount{
+    max-width: 520px;
+    height: 130px;
+}
+.all__btn{
+    margin-top: 30px;
+    height: 48px;
+    width: 180px;
+    color:#3675D9 ;
+    border: solid 1px #3675D9;
+    border-radius: 7px;
+}
+.all__btn:hover{
+    background-color:#13489d ;
+    color: white;
+    transition: all 0.3s;
+
+}

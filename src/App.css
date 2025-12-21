@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 0 auto;
+}
+.container__card,
+.companies__container,
+.discount__container,
+.contain__gift,
+.container,
+.container__life--mind,
+.services__container,
+.container__counts,
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  body{
+    padding: 4px;
+
+  }
+    .container__card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .button__header {
+      justify-content: center;
+    }
+  }
+  

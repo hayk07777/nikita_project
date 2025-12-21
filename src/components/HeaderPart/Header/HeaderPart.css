@@ -1,0 +1,40 @@
+
+.container__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 7px;
+  .firstGirl{
+    width: 100%;
+  }
+ .pause{
+    cursor: pointer;
+
+ }
+}
+.text__container--hdr {
+  max-width: 500px;
+}
+.button__header{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  button{
+    width: 170px;
+    cursor: pointer;
+    height: 52px;
+    background-color: #3675D9;
+    border-radius: 7px;
+    border: none;
+    color: #fff;
+    letter-spacing: 2px;
+
+  }
+  
+  
+}
+.img__contain {
+  max-width: 500px;
+}

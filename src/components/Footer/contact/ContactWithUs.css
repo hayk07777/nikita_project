@@ -1,0 +1,177 @@
+.contact__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+.contact__container {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.footer__wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title__part h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.title__part p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.inputs__row {
+    display: flex;
+    gap: 15px;
+}
+
+.input__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input__item p, .services__title {
+    font-size: 14px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.standard__in, .phone__select, .textarea__in {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.standard__in {
+    height: 48px;
+    padding: 0 15px;
+}
+
+.textarea__in {
+    height: 100px;
+    padding: 12px 15px;
+    resize: none;
+}
+
+.phone__select {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    overflow: hidden;
+}
+
+.flag__cap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background: #fdfdfd;
+    border-right: 1px solid #eee;
+    height: 100%;
+    cursor: pointer;
+}
+
+.flag__cap img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.phone__select input {
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    flex: 1;
+    font-size: 15px;
+}
+
+.services__section {
+    margin-top: 10px;
+}
+
+.checkbox__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__checkbox input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #3675D9;
+}
+
+.footer__checkbox label {
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+}
+
+.submit__btn {
+    height: 52px;
+    background-color: #3675D9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.submit__btn:hover {
+    background-color: #1a56b5;
+}
+
+.contact__map--part {
+    flex: 1;
+    min-height: 550px;
+    align-self: stretch;
+}
+
+.map__wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.map__wrapper iframe {
+    filter: grayscale(100%);
+    border: none;
+}

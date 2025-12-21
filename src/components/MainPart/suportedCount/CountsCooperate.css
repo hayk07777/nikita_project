@@ -1,0 +1,18 @@
+.container__counts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+h2{
+    text-align: center;
+    font-size: 81px;
+    
+}
+p{
+   font-size: 20px; 
+   text-align: center;
+   color: rgb(99, 99, 99);
+}
+}
