@@ -1,4 +1,4 @@
-import "./GetGiftPart.css";
+import "./GetGiftPart.scss";
 import hecoPic from "../../../images/picture/heco.png"
 export const GetGiftPart = () => {
   return (

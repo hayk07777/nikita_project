@@ -1,4 +1,4 @@
-import "./ContactWithUs.css";
+import "./ContactWithUs.scss";
 import armeniaFlag from "../../../images/picture/flag.png";
 
 export const ContactWithUs = () => {

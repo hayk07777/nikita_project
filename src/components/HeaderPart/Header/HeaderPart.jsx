@@ -1,4 +1,4 @@
-import "./HeaderPart.css"
+import "./HeaderPart.scss"
 import pause from "../../../images/picture/pause.png"
 
 import firstGirl from "../../../images/picture/girl1.png"

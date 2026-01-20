@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./NavigationPanel.css";
+import "./NavigationPanel.scss";
 import logoFirm from "../../../images/logo/firma.png";
 
 export const NavigationPanel = () => {

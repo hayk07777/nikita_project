@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./Header.scss";
 
 export const HeaderAddPart = () => {
   return (

@@ -1,4 +1,4 @@
-import "./SendLifePart.css";
+import "./SendLifePart.scss";
 import inp from "../../../images/picture/inp.png";
 
 export const SendLifePart = () => {

@@ -1,4 +1,4 @@
-import "./CountsCooperate.css"
+import "./CountsCooperate.scss"
 export const CountsCooperate = () => {
   return (
     <section className="container__counts"> 

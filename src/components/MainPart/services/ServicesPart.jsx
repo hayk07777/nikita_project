@@ -1,4 +1,4 @@
-import "./ServicesPart.css";
+import "./ServicesPart.scss";
 import card1 from "../../../images/picture/card1.png";
 import card2 from "../../../images/picture/card2.png";
 import card3 from "../../../images/picture/card3.png";

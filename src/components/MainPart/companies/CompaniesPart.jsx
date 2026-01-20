@@ -1,4 +1,4 @@
-import "./CompaniesPart.css"
+import "./CompaniesPart.scss"
 import facebookLogo from "../../../images/logo/facebookLogo.png";
 import vivaLogo from "../../../images/logo/vivaLogo.png";
 import gmailLogo from "../../../images/logo/gmailLogo.png";

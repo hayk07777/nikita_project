@@ -1,4 +1,4 @@
-import "./NeedText.css";
+import "./NeedText.scss";
 import commandPic from "../../../images/picture/commandPic.png";
 
 export const NeedText = () => {

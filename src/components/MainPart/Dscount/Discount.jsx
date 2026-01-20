@@ -1,4 +1,4 @@
-import "./Discount.css";
+import "./Discount.scss";
 import boy from "../../../images/picture/boy2.png"
 export const Discount = () => {
   return (
