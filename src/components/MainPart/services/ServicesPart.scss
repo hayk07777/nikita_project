@@ -1,39 +1,36 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
 .services__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    gap: 50px;
-    margin-top: 70px;
-  }
-  
-  .title__services p {
+  @include flex-center(column, 50px);
+  margin-top: 70px;
+}
+
+.title__services {
+  p {
     font-size: 32px;
     font-weight: bold;
     text-align: center;
+    margin: 0;
   }
-  
-  .cards__wrapper {
-    display: flex;
-    gap: 130px;
-    flex-wrap: wrap;
-    
 }
-  
-  .card {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 17px;
-      margin: 0 auto;
 
-      background-color:#E1EAF980;
-      border-radius: 7px;
-    text-align: center;
-    p{
+.cards__wrapper {
+  @include flex-center($gap: 130px);
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  @include flex-center(column, 17px);
+  margin: 0 auto;
+  background-color: $bg-light;
+  border-radius: 7px;
+  text-align: center;
+  padding: 20px; 
+
+  p {
     line-height: 23px;
-
-    }
+    margin: 0;
   }
-  
+}

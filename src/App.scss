@@ -1,9 +1,8 @@
 @import "./styles/variables";
 
-*,
-*::before,
-*::after {
+*{
   box-sizing: border-box;
+  
 }
 
 img {

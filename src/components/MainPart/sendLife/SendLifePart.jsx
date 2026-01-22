@@ -5,18 +5,16 @@ export const SendLifePart = () => {
   return (
     <section className="container__life--mind">
       <div className="main__content">
-        <article className="title-top">
-          <h2>
-            Կյանքի կոչիր բոլոր վառ գաղափարներդ՝ Nikita Mobile-ի հետ
-          </h2>
-        </article>
+        <div className="title-top">
+          <h2>Կյանքի կոչիր բոլոր վառ գաղափարներդ՝ Nikita Mobile-ի հետ</h2>
+        </div>
 
         <div className="container__cards">
-          <article className="inp-image-box">
+          <div className="inp-image-box">
             <img src={inp} alt="Form" className="inp__img" />
-          </article>
+          </div>
 
-          <article className="type__code--container">
+          <div className="type__code--container">
             <div className="qayl2">
               <span>Քայլ 2</span>
             </div>
@@ -25,9 +23,9 @@ export const SendLifePart = () => {
             </div>
             <div className="about">
               <p>
-                Mobile ID-ն անձի նույնականացման, ինչպես նաև էլեկտրոնային եղանակով
-                ստորագրելու հարթակ է: Համակարգը հնարավորություն է տալիս ստորագրել
-                ցանկացած փաստաթուղթ առանց հավելյալ ջանքերի:
+                Mobile ID-ն անձի նույնականացման, ինչպես նաև էլեկտրոնային
+                եղանակով ստորագրելու հարթակ է: Համակարգը հնարավորություն է տալիս
+                ստորագրել ցանկացած փաստաթուղթ առանց հավելյալ ջանքերի:
               </p>
             </div>
             <ul className="features__list">
@@ -35,7 +33,7 @@ export const SendLifePart = () => {
               <li>Ուղարկել կոդը "պլատֆորմով"</li>
             </ul>
             <button className="learn__more--btn">Իմանալ ավելին</button>
-          </article>
+          </div>
         </div>
       </div>
     </section>

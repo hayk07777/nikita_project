@@ -11,8 +11,8 @@ export const HeaderPart = () => {
       <NavigationPanel/>
        <div className="container__card">
        <div className="text__container--hdr">
-            <h1>Խելացի մտքեր, <br /> Ձեր բրենդնի <br /> համար💡</h1>
-            <p>Բարձրացրեք ձեր վաճառքների ճանապարհը՝ <br />
+            <h1>Խելացի մտքեր,  Ձեր բրենդնի համար💡</h1>
+            <p>Բարձրացրեք ձեր վաճառքների ճանապարհը՝ 
             արդյունավետ հաղորդակցությամբ յուրաքանչյուր քայլում։</p>
 <div className="button__header">
 <button>Կապ մեզ հետ </button><img src={pause} className="pause" alt="pause" />

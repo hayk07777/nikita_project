@@ -2,16 +2,16 @@ import "./CountsCooperate.scss"
 export const CountsCooperate = () => {
   return (
     <section className="container__counts"> 
-        <article>
+        <div>
             <h2>180+</h2>
             <p>Countries Supported</p>
-        </article>     <article>
+        </div>     <div>
             <h2>+40K</h2>
             <p>Affiliates</p>
-        </article>     <article>
+        </div>     <div>
             <h2>$7M</h2>
             <p>Commissions Paid</p>
-        </article>
+        </div>
 
     </section>
   )

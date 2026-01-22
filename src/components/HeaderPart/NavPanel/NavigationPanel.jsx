@@ -18,12 +18,34 @@ export const NavigationPanel = () => {
         </NavLink>
 
         <div className={`nav__menu ${isOpen ? "open" : ""}`}>
-          <NavLink to="/services" onClick={closeMenu}>Մեր ծառայությունները</NavLink>
-          <NavLink to="/how-it-works" onClick={closeMenu}>Ինչպես է դա աշխատում</NavLink>
-          <NavLink to="/about" onClick={closeMenu}>Մեր մասին</NavLink>
-          <NavLink to="/partners" onClick={closeMenu}>Գործընկերներ</NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>Կապ մեզ հետ</NavLink>
-          
+          <ul className="nav__list">
+            <li>
+              <NavLink to="/services" onClick={closeMenu}>
+                Մեր ծառայությունները
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/how-it-works" onClick={closeMenu}>
+                Ինչպես է դա աշխատում
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" onClick={closeMenu}>
+                Մեր մասին
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/partners" onClick={closeMenu}>
+                Գործընկերներ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Կապ մեզ հետ
+              </NavLink>
+            </li>
+          </ul>
+
           <div className="mobile__tel">
             <span className="lang-box">ՀՅ</span>
             <span className="phone-box">✆ {telNum}</span>
@@ -35,7 +57,10 @@ export const NavigationPanel = () => {
           <span>✆ {telNum}</span>
         </div>
 
-        <div className={`burger ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
+        <div 
+          className={`burger ${isOpen ? "active" : ""}`} 
+          onClick={toggleMenu}
+        >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -46,7 +71,6 @@ export const NavigationPanel = () => {
         className={`nav-overlay ${isOpen ? "active" : ""}`} 
         onClick={closeMenu}
       ></div>
-      
     </>
   );
 };

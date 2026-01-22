@@ -27,11 +27,15 @@
     font-weight: 700;
 }
 
-.title__part p {
+.title__part  {
+  p{
+
     color: #666;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 30px;
+    max-width: 400px;
+  }
 }
 
 .footer__form {

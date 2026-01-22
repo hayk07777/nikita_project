@@ -1,50 +1,48 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
 .container__header--add {
-    min-height: 40px;
-    color: #fff;
-    background-color: #3675D9;
-    border-radius: 7px 7px 0 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    gap: 12px;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-}
+  @include flex-center($gap: 12px);
+  min-height: 40px;
+  color: $white;
+  background-color: $blue-main;
+  border-radius: 7px 7px 0 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  box-sizing: border-box;
 
-.container__header--add p {
+  p {
     margin: 0;
-}
+  }
 
-.container__header--add a {
-    color: #fff;
+  a {
+    color: $white;
     text-decoration: underline;
     white-space: nowrap;
     font-weight: 700;
-}
+  }
 
-@media (max-width: 600px) {
-    .container__header--add {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 15px 20px;
-        gap: 10px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 15px 20px;
+    gap: 10px;
+
+    p {
+      width: 100%;
+      max-width: 280px;
+      line-height: 1.4;
+      font-size: 15px;
+      text-align: left;
     }
 
-    .container__header--add p {
-        width: 100%;
-        max-width: 280px;
-        line-height: 1.4;
-        font-size: 15px;
-        text-align: left;
+    a {
+      align-self: flex-start;
+      font-size: 16px;
     }
-
-    .container__header--add a {
-        align-self: flex-start;
-        font-size: 16px;
-    }
+  }
 }

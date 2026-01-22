@@ -1,55 +1,94 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
 .container__nav {
-  display: flex;
+  @include flex-center(row, 0);
   justify-content: space-between;
-  align-items: center;
   padding: 15px 5%;
-  background: #fff;
+  background: $white;
   position: relative;
   z-index: 1000;
-}
 
-.firmLogo img {
-  width: 150px;
+  .firmLogo img {
+    width: 150px;
+  }
 }
 
 .nav__menu {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
+  @include flex-center;
 
-.nav__menu a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #1F1F1F;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+  .nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
 
-.nav__menu a:hover {
-  color: #3675D9;
+    li {
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #1F1F1F;
+        font-weight: 500;
+        transition: color $tr-300;
+
+        &:hover {
+          color: $blue-main;
+        }
+        
+        &.active {
+          color: $blue-main;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background-color: $white;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    padding: 40px 0;
+    z-index: 999;
+
+    &.open {
+      left: 0;
+    }
+
+    .nav__list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 }
 
 .desktop__tel {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+  @include flex-center(row, 10px);
 
-.desktop__tel p {
-  background: rgba(54, 117, 217, 0.1);
-  color: #3675D9;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 0;
-}
+  p {
+    background: $blue-light;
+    color: $blue-main;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+  }
 
-.desktop__tel span {
-  border: 1px solid #3675D9;
-  color: #3675D9;
-  padding: 5px 15px;
-  border-radius: 5px;
-  font-size: 14px;
+  span {
+    border: 1px solid $blue-main;
+    color: $blue-main;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .burger {
@@ -57,65 +96,42 @@
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
-}
 
-.burger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  transition: 0.3s;
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+
+    &.active {
+      .bar {
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
 }
 
 .mobile__tel {
   display: none;
-}
 
-@media (max-width: 1024px) {
-  .burger {
-    display: flex;
-  }
-
-  .desktop__tel {
-    display: none;
-  }
-
-  .nav__menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    text-align: center;
-    transition: 0.4s;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    padding: 40px 0;
-    z-index: 999;
-  }
-
-  .nav__menu.open {
-    left: 0;
-  }
-
-  .mobile__tel {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  @media (max-width: 1024px) {
+    @include flex-center(column, 15px);
     margin-top: 20px;
   }
-
-  .burger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .burger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .burger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
 }
+
 .nav-overlay {
   position: fixed;
   inset: 0;
@@ -124,9 +140,9 @@
   pointer-events: none;
   transition: 0.3s;
   z-index: 998;
-}
 
-.nav-overlay.active {
-  opacity: 1;
-  pointer-events: all;
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
