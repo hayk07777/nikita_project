@@ -2,6 +2,7 @@
 @import "../../../styles/mixins";
 
 .container__card {
+  text-align: start;
   @include flex-center($gap: 40px);
   flex-wrap: wrap;
   padding: 7px;
@@ -18,7 +19,6 @@
 .text__container--hdr {
   h1{
   max-width: 300px;
-
   }
   p{
     max-width: 400px;
