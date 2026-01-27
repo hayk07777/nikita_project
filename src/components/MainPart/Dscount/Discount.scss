@@ -1,8 +1,8 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@use "../../../modules" as mxs;
+
 
 .discount__container {
-  @include flex-center($gap: 74px);
+  @include mxs.flex-center($gap: 74px);
   flex-wrap: wrap;
 }
 
@@ -12,20 +12,20 @@
 }
 
 .text__contain {
-  @include flex-center(column, 30px);
+  @include mxs.flex-center(column, 30px);
   align-items: flex-start; 
   line-height: 27px;
 }
 
 
 .step__first {
-  background-color: $green-accent; 
-  @include flex-center;
+  background-color: mxs.$green-accent; 
+  @include mxs.flex-center;
   width: 60px;
   height: 28px;
   border-radius: 17px;
   text-align: center;
-  color: $white;
+  color: mxs.$white;
 }
 
 .about__discount {
@@ -37,16 +37,16 @@
   margin-top: 30px;
   height: 48px;
   width: 180px;
-  color: $blue-main;
-  border: solid 1px $blue-main;
+  color: mxs.$blue-main;
+  border: solid 1px mxs.$blue-main;
   border-radius: 7px;
   background-color: transparent;
   cursor: pointer;
-  transition: all $tr-300;
+  transition: all mxs.$tr-300;
 
   &:hover {
     background-color: #13489d;
-    color: $white;
+    color: mxs.$white;
   }
 }
 .about__discount--container{

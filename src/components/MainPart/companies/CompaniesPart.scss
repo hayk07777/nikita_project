@@ -1,20 +1,20 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@use "../../../modules" as mxs;
+
 
 .companies__container {
-  @include flex-center(column, 30px);
+  @include mxs.flex-center(column, 30px);
   padding: 40px 20px;
 }
 
 .operators {
-  @include flex-center($gap: 30px);
+  @include mxs.flex-center($gap: 30px);
   flex-wrap: wrap;
 
   img {
     height: 25px;
     object-fit: contain;
     opacity: 0.7;
-    transition: opacity $tr-300;
+    transition: opacity mxs.$tr-300;
 
     &:hover {
       opacity: 1;

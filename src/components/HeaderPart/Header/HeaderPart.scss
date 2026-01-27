@@ -1,9 +1,9 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@use "../../../modules" as mxs;
+
 
 .container__card {
   text-align: start;
-  @include flex-center($gap: 40px);
+  @include mxs.flex-center($gap: 40px);
   flex-wrap: wrap;
   padding: 7px;
 
@@ -32,10 +32,10 @@
     width: 170px;
     height: 52px;
     cursor: pointer;
-    background-color: $blue-main; 
+    background-color: mxs.$blue-main; 
     border-radius: 7px;
     border: none;
-    color: $white; 
+    color: mxs.$white; 
     letter-spacing: 2px;
   }
 }

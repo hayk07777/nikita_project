@@ -1,11 +1,11 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@use "../../../modules" as mxs;
+
 
 .container__header--add {
-  @include flex-center($gap: 12px);
+  @include mxs.flex-center($gap: 12px);
   min-height: 40px;
-  color: $white;
-  background-color: $blue-main;
+  color: mxs.$white;
+  background-color: mxs.$blue-main;
   border-radius: 7px 7px 0 0;
   width: 100%;
   font-weight: 500;
@@ -19,7 +19,7 @@
   }
 
   a {
-    color: $white;
+    color: mxs.$white;
     text-decoration: underline;
     white-space: nowrap;
     font-weight: 700;

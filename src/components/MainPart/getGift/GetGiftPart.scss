@@ -1,13 +1,13 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@use "../../../modules" as mxs;
+
 
 .contain__gift {
-  @include flex-center($gap: 77px);
+  @include mxs.flex-center($gap: 77px);
   flex-wrap: wrap;
 }
 
 .text__part {
-  @include flex-center(column, 30px);
+  @include mxs.flex-center(column, 30px);
   align-items: flex-start;
   line-height: 22px;
   p{
@@ -16,25 +16,25 @@
 }
 
 .qayl1 {
-  background-color: $blue-main;
+  background-color: mxs.$blue-main;
   width: 64px;
   border-radius: 17px;
   text-align: center;
-  color: $white;
+  color:mxs.$white;
 }
 
 .learn__more--bt {
   padding: 12px 35px;
-  border: 1px solid $blue-main;
-  background: $white;
-  color: $blue-main;
+  border: 1px solid mxs.$blue-main;
+  background: mxs.$white;
+  color: mxs.$blue-main;
   border-radius: 8px;
   cursor: pointer;
-  transition: $tr-300;
+  transition: mxs.$tr-300;
   font-weight: 600;
 
   &:hover {
-    background: $blue-main;
-    color: $white;
+    background: mxs.$blue-main;
+    color: mxs.$white;
   }
 }

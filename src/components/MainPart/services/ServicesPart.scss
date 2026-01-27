@@ -1,8 +1,8 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@use "../../../modules" as mxs;
+
 
 .services__container {
-  @include flex-center(column, 50px);
+  @include mxs.flex-center(column, 50px);
   margin-top: 70px;
 }
 
@@ -16,15 +16,15 @@
 }
 
 .cards__wrapper {
-  @include flex-center($gap: 130px);
+  @include mxs.flex-center($gap: 130px);
   flex-wrap: wrap;
 }
 
 .card {
   width: 300px;
-  @include flex-center(column, 17px);
+  @include mxs.flex-center(column, 17px);
   margin: 0 auto;
-  background-color: $bg-light;
+  background-color: mxs.$bg-light;
   border-radius: 7px;
   text-align: center;
   padding: 20px; 

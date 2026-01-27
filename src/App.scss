@@ -1,5 +1,4 @@
-@import "./styles/variables";
-
+@use "./modules" as mxs;
 *{
   box-sizing: border-box;
   
