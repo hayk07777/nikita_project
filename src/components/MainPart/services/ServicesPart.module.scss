@@ -1,12 +1,12 @@
-@use "../../../modules" as mxs;
+@use "../../../modules" as *;
 
 
-.services__container {
-  @include mxs.flex-center(column, 50px);
+.container{
+  @include flex-center(column, 50px);
   margin-top: 70px;
 }
 
-.title__services {
+.title {
   p {
     font-size: 32px;
     font-weight: bold;
@@ -15,16 +15,16 @@
   }
 }
 
-.cards__wrapper {
-  @include mxs.flex-center($gap: 130px);
+.wrapper {
+  @include flex-center($gap: 130px);
   flex-wrap: wrap;
 }
 
 .card {
   width: 300px;
-  @include mxs.flex-center(column, 17px);
+  @include flex-center(column, 17px);
   margin: 0 auto;
-  background-color: mxs.$bg-light;
+  background-color: $bg-light;
   border-radius: 7px;
   text-align: center;
   padding: 20px; 

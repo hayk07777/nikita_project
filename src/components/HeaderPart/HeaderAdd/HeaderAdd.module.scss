@@ -1,11 +1,11 @@
-@use "../../../modules" as mxs;
+@use "../../../modules" as *;
 
 
-.container__header--add {
-  @include mxs.flex-center($gap: 12px);
+.container {
+  @include flex-center($gap: 12px);
   min-height: 40px;
-  color: mxs.$white;
-  background-color: mxs.$blue-main;
+  color: $white;
+  background-color: $blue-main;
   border-radius: 7px 7px 0 0;
   width: 100%;
   font-weight: 500;
@@ -19,7 +19,7 @@
   }
 
   a {
-    color: mxs.$white;
+    color: $white;
     text-decoration: underline;
     white-space: nowrap;
     font-weight: 700;

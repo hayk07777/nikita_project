@@ -1,0 +1,59 @@
+@use "../../../modules" as *; 
+
+
+
+
+.container {
+  @include flex-center($gap: 40px);
+  text-align: start;
+  flex-wrap: wrap;
+  padding: 7px;
+
+  .girl {
+    width: 100%;
+  }
+
+  .pause {
+    cursor: pointer;
+  }
+}
+.pause:hover{
+  background-color: $blue-main; 
+
+}
+
+.textContainer {
+  h1{
+  max-width: 300px;
+  }
+  p{
+    max-width: 400px;
+  }
+}
+
+.headerBtn {
+  @include flex-center($gap:20px);
+
+
+
+  button {
+    width: 170px;
+    height: 52px;
+    cursor: pointer;
+    background-color: $blue-main; 
+    border-radius: 7px;
+    border: none;
+    color: $white; 
+    letter-spacing: 2px;
+    transition: all 0.4s;
+  }
+}
+button:hover{
+  background-color: rgb(148, 214, 236);
+  color: $blue-main;
+  
+}
+
+.img {
+  max-width: 500px;
+}

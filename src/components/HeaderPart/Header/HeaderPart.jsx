@@ -1,4 +1,4 @@
-import "./HeaderPart.scss"
+import h from "./HeaderPart.module.scss"
 import pause from "../../../images/picture/pause.png"
 
 import firstGirl from "../../../images/picture/girl1.png"
@@ -9,19 +9,19 @@ export const HeaderPart = () => {
     <header >
       <HeaderAddPart/>
       <NavigationPanel/>
-       <div className="container__card">
-       <div className="text__container--hdr">
+       <div className={h.container}>
+       <div className={h.textContainer}>
             <h1>Խելացի մտքեր,  Ձեր բրենդնի համար💡</h1>
             <p>Բարձրացրեք ձեր վաճառքների ճանապարհը՝ 
             արդյունավետ հաղորդակցությամբ յուրաքանչյուր քայլում։</p>
-<div className="button__header">
-<button>Կապ մեզ հետ </button><img src={pause} className="pause" alt="pause" />
+<div className={h.headerBtn}>
+<button>Կապ մեզ հետ </button><img src={pause} className={h.pause} alt="pause" />
 
 
 </div>
         </div>
-<div className="img__contain">
-  <img src={firstGirl} alt="firstGirl"  className="firstGirl"/>
+<div className={h.img}>
+  <img src={firstGirl} alt="firstGirl"  className={h.girl}/>
 </div>
        </div>
     </header>

@@ -1,0 +1,57 @@
+@use "../../../modules" as *;
+
+
+.container {
+  @include flex-center($gap: 74px);
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.img {
+  max-width: 620px;
+  max-height: 572px;
+}
+
+.texts {
+  @include flex-center(column, 30px);
+  align-items: flex-start; 
+  line-height: 27px;
+}
+
+
+.first {
+  background-color: $green-accent; 
+  @include flex-center;
+  width: 60px;
+  height: 28px;
+  border-radius: 17px;
+  text-align: center;
+  color: $white;
+}
+
+.aboutDiscount {
+  max-width: 520px;
+  height: 130px;
+}
+
+.btn {
+  margin-top: 30px;
+  height: 48px;
+  width: 180px;
+  color: $blue-main;
+  border: solid 1px $blue-main;
+  border-radius: 7px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all $tr-300;
+
+  &:hover {
+    background-color: #13489d;
+    color:$white;
+  }
+}
+.aboutContain{
+  p{
+max-width: 470px;
+  }
+}

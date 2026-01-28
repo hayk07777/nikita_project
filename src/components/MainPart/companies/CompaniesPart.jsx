@@ -1,4 +1,4 @@
-import "./CompaniesPart.scss";
+import comp from "./CompaniesPart.module.scss";
 import facebookLogo from "../../../images/logo/facebookLogo.png";
 import vivaLogo from "../../../images/logo/vivaLogo.png";
 import gmailLogo from "../../../images/logo/gmailLogo.png";
@@ -9,11 +9,11 @@ import ucom from "../../../images/logo/ucomLogo.png";
 
 export const CompaniesPart = () => {
   return (
-    <section className="companies__container">
-      <div className="title">
+    <section className={comp.container}>
+      <div className={comp.title}>
         <p>Միացե՛ք արդեն աճող 4000+ ընկերություններին</p>
       </div>
-      <div className="operators">
+      <div className={comp.operators}>
         <img src={facebookLogo} alt="facebookLogo" />
         <img src={vivaLogo} alt="vivaLogo" />
         <img src={gmailLogo} alt="gmailLogo" />

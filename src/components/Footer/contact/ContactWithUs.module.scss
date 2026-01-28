@@ -1,11 +1,11 @@
-.contact__section {
+.section {
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: #fff;
 }
 
-.contact__container {
+.container {
     flex-wrap: wrap;
     display: flex;
     gap: 40px;
@@ -14,20 +14,20 @@
     align-items: flex-start;
 }
 
-.footer__wrapper {
+.wrapper {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.title__part h1 {
+.title h1 {
     font-size: 42px;
     margin-bottom: 15px;
     color: #1a1a1a;
     font-weight: 700;
 }
 
-.title__part  {
+.title  {
   p{
 
     color: #666;
@@ -38,31 +38,31 @@
   }
 }
 
-.footer__form {
+.forms {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 0 auto;
 }
 
-.inputs__row {
+.inputs {
     display: flex;
     gap: 15px;
 }
 
-.input__item {
+.items {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.input__item p, .services__title {
+.items p, .services {
     font-size: 14px;
     color: #1a1a1a;
     font-weight: 600;
 }
 
-.standard__in, .phone__select, .textarea__in {
+.standard, .select, .textarea {
     border: 1px solid #dcdcdc;
     border-radius: 8px;
     background: white;
@@ -70,25 +70,25 @@
     outline: none;
 }
 
-.standard__in {
+.standard {
     height: 48px;
     padding: 0 15px;
 }
 
-.textarea__in {
+.textarea {
     height: 100px;
     padding: 12px 15px;
     resize: none;
 }
 
-.phone__select {
+.select {
     display: flex;
     align-items: center;
     height: 48px;
     overflow: hidden;
 }
 
-.flag__cap {
+.flag {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -99,14 +99,14 @@
     cursor: pointer;
 }
 
-.flag__cap img {
+.flag img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.phone__select input {
+.select input {
     border: none;
     outline: none;
     padding: 0 15px;
@@ -114,37 +114,37 @@
     font-size: 15px;
 }
 
-.services__section {
+.services {
     margin-top: 10px;
 }
 
-.checkbox__grid {
+.checkboxGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin-top: 15px;
 }
 
-.footer__checkbox {
+.footerCheckbox {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.footer__checkbox input {
+.footerCheckbox input {
     width: 20px;
     height: 20px;
     cursor: pointer;
     accent-color: #3675D9;
 }
 
-.footer__checkbox label {
+.footerCheckbox label {
     font-size: 14px;
     color: #444;
     cursor: pointer;
 }
 
-.submit__btn {
+.submit {
     height: 52px;
     background-color: #3675D9;
     color: white;
@@ -157,17 +157,17 @@
     transition: background 0.3s ease;
 }
 
-.submit__btn:hover {
+.submit:hover {
     background-color: #1a56b5;
 }
 
-.contact__map--part {
+.mapPart {
     flex: 1;
     min-height: 550px;
     align-self: stretch;
 }
 
-.map__wrapper {
+.mapWrapper {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -175,7 +175,7 @@
     border: 1px solid #eee;
 }
 
-.map__wrapper iframe {
+.mapWrapper iframe {
     filter: grayscale(100%);
     border: none;
 }

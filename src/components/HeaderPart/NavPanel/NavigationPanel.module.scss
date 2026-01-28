@@ -1,29 +1,29 @@
-@use "../../../modules" as mxs;
+@use "../../../modules" as *;
 
 
 
-.container__nav {
-  @include mxs.flex-center(row, 0);
+.container {
+  @include flex-center(row, 0);
   justify-content: space-between;
   padding: 15px 5%;
-  background: mxs.$white;
+  background: $white;
   position: relative;
   z-index: 1000;
 
-  .firmLogo img {
+  .logo img {
     width: 150px;
   }
 }
 
-.nav__menu {
-  @include mxs.flex-center;
-
-  .nav__list {
+.menu {
+  @include flex-center;
+  .list {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 25px;
+
 
     li {
       a {
@@ -31,14 +31,14 @@
         font-size: 14px;
         color: #1F1F1F;
         font-weight: 500;
-        transition: color mxs.$tr-300;
+        transition: color $tr-300;
 
         &:hover {
-          color: mxs.$blue-main;
+          color: $blue-main;
         }
         
         &.active {
-          color: mxs.$blue-main;
+          color: $blue-main;
         }
       }
     }
@@ -49,7 +49,7 @@
     top: 70px;
     left: -100%;
     flex-direction: column;
-    background-color: mxs.$white;
+    background-color: $white;
     width: 100%;
     text-align: center;
     transition: 0.4s;
@@ -61,27 +61,27 @@
       left: 0;
     }
 
-    .nav__list {
+    .list {
       flex-direction: column;
       gap: 20px;
     }
   }
 }
 
-.desktop__tel {
-  @include mxs.flex-center(row, 10px);
+.desktop {
+  @include flex-center(row, 10px);
 
   p {
-    background: mxs.$blue-light;
-    color: mxs.$blue-main;
+    background: $blue-light;
+    color: $blue-main;
     padding: 5px 10px;
     border-radius: 5px;
     margin: 0;
   }
 
   span {
-    border: 1px solid mxs.$blue-main;
-    color: mxs.$blue-main;
+    border: 1px solid $blue-main;
+    color: $blue-main;
     padding: 5px 15px;
     border-radius: 5px;
     font-size: 14px;
@@ -124,16 +124,16 @@
   }
 }
 
-.mobile__tel {
+.mobile {
   display: none;
 
   @media (max-width: 1024px) {
-    @include mxs.flex-center(column, 15px);
+    @include flex-center(column, 15px);
     margin-top: 20px;
   }
 }
 
-.nav-overlay {
+.overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);

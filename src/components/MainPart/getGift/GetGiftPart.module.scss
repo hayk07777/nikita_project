@@ -1,0 +1,40 @@
+@use "../../../modules" as *;
+
+
+.container {
+  @include flex-center($gap: 77px);
+  flex-wrap: wrap;
+}
+
+.texts {
+  @include flex-center(column, 30px);
+  align-items: flex-start;
+  line-height: 22px;
+  p{
+    max-width: 470px;
+  }
+}
+
+.step {
+  background-color: $blue-main;
+  width: 64px;
+  border-radius: 17px;
+  text-align: center;
+  color: $white;
+}
+
+.btn {
+  padding: 12px 35px;
+  border: 1px solid $blue-main;
+  background: $white;
+  color: $blue-main;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: $tr-300;
+  font-weight: 600;
+
+  &:hover {
+    background: $blue-main;
+    color: $white;
+  }
+}

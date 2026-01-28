@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./NavigationPanel.scss";
+import nav from "./NavigationPanel.module.scss";
 import logoFirm from "../../../images/logo/firma.png";
 
 export const NavigationPanel = () => {
@@ -12,13 +12,13 @@ export const NavigationPanel = () => {
 
   return (
     <>
-      <nav className="container__nav">
-        <NavLink to="/" className="firmLogo" onClick={closeMenu}>
+      <nav className={nav.container}>
+        <NavLink to="/" className={nav.logo} onClick={closeMenu}>
           <img src={logoFirm} alt="logoFirm" />
         </NavLink>
 
-        <div className={`nav__menu ${isOpen ? "open" : ""}`}>
-          <ul className="nav__list">
+        <div className={`${nav.menu} ${isOpen ? nav.open : ""}`}>
+          <ul className={nav.list}>
             <li>
               <NavLink to="/services" onClick={closeMenu}>
                 Մեր ծառայությունները
@@ -46,29 +46,29 @@ export const NavigationPanel = () => {
             </li>
           </ul>
 
-          <div className="mobile__tel">
+          <div className={nav.mobile}>
             <span className="lang-box">ՀՅ</span>
             <span className="phone-box">✆ {telNum}</span>
           </div>
         </div>
 
-        <div className="desktop__tel">
+        <div className={nav.desktop}>
           <p>ՀՅ</p>
           <span>✆ {telNum}</span>
         </div>
 
         <div 
-          className={`burger ${isOpen ? "active" : ""}`} 
+          className={`${nav.burger} ${isOpen ? nav.active : ""}`} 
           onClick={toggleMenu}
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className={nav.bar}></span>
+          <span className={nav.bar}></span>
+          <span className={nav.bar}></span>
         </div>
       </nav>
 
       <div 
-        className={`nav-overlay ${isOpen ? "active" : ""}`} 
+        className={`${nav.overlay} ${isOpen ? nav.active : ""}`} 
         onClick={closeMenu}
       ></div>
     </>

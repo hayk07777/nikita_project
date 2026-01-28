@@ -1,7 +1,7 @@
-import "./CountsCooperate.scss"
+import count from "./CountsCooperate.module.scss"
 export const CountsCooperate = () => {
   return (
-    <section className="container__counts"> 
+    <section className={count.container}> 
         <div>
             <h2>180+</h2>
             <p>Countries Supported</p>

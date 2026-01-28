@@ -1,16 +1,16 @@
-import "./ServicesPart.scss";
+import svs from "./ServicesPart.module.scss";
 import card1 from "../../../images/picture/card1.png";
 import card2 from "../../../images/picture/card2.png";
 import card3 from "../../../images/picture/card3.png";
 export const ServicesPart = () => {
   return (
-    <section className="services__container">
-      <div className="title__services">
+    <section className={svs.container}>
+      <div className={svs.title}>
         <p>Մեր ծառայությունները 🚀</p>
       </div>
 
-      <div className="cards__wrapper">
-        <div className="card">
+      <div className={svs.wrapper}>
+        <div className={svs.card}>
           <img src={card1} alt="card1" />
           <h2>ՍՄՍ և Վեբ</h2>
           <p>
@@ -19,7 +19,7 @@ export const ServicesPart = () => {
           </p>
         </div>
 
-        <div className="card">
+        <div className={svs.card}>
           <img src={card2} alt="card2" />
           <h2>Վեբ</h2>
           <p>
@@ -29,7 +29,7 @@ export const ServicesPart = () => {
           </p>
         </div>
 
-        <div className="card">
+        <div className={svs.card}>
           <img src={card3} alt="card3" />
           <h2>ՍՄՍ</h2>
           <p>

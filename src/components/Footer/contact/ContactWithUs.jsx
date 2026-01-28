@@ -1,4 +1,4 @@
-import "./ContactWithUs.scss";
+import c from  "./ContactWithUs.module.scss";
 import armeniaFlag from "../../../images/picture/flag.png";
 
 export const ContactWithUs = () => {
@@ -30,10 +30,10 @@ export const ContactWithUs = () => {
   };
 
   return (
-    <section className="contact__section">
-      <div className="contact__container">
-        <article className="footer__wrapper">
-          <div className="title__part">
+    <section className={c.section}>
+      <div className={c.container}>
+        <article className={c.wrapper}>
+          <div className={c.title}>
             <h1>Կապ մեզ հետ</h1>
             <p>
               Մենք տրամադրում ենք շուրջօրյա ծառայություն, 
@@ -41,100 +41,99 @@ export const ContactWithUs = () => {
             </p>
           </div>
 
-          <form className="footer__form">
-            <div className="inputs__row">
-              <div className="input__item">
+          <form className={c.forms}>
+            <div className={c.inputs}>
+              <div className={c.items}>
                 <p>Անուն*</p>
                 <input
                   type="text"
                   name="firstName"
                   placeholder="Անուն"
-                  className="standard__in"
+                  className={c.standard}
                 />
               </div>
-              <div className="input__item">
+              <div className={c.items}>
                 <p>Ազգանուն*</p>
                 <input
                   type="text"
                   placeholder="Ազգանուն"
                   name="lastName"
-                  className="standard__in"
+                  className={c.standard}
                 />
               </div>
             </div>
 
-            <div className="input__item">
+            <div className={c.items}>
               <p>Էլ. փոստ*</p>
               <input
                 name="email"
                 type="email"
                 placeholder="Էլ. փոստ"
-                className="standard__in"
+                className={c.standard}
               />
             </div>
 
-            <div className="inputs__row">
-              <div className="input__item">
+            <div className={c.inputs}>
+              <div className={c.items}>
                 <p>Հեռախոս*</p>
-                <div className="phone__select">
-                  <div className="flag__cap">
+                <div className={c.select}>
+                  <div className={c.flag}>
                     <img src={armeniaFlag} alt="AM" />
                     <span>+374</span>
-                    <span className="arrow__icon">▼</span>
+                    <span className={c.arrow}>▼</span>
                   </div>
                   <input name="telephone" type="tel" placeholder="552123456" />
                 </div>
               </div>
             </div>
 
-            <div className="input__item">
+            <div className={c.items}>
               <p>Բովանդակություն*</p>
               <textarea
                 name="content"
                 placeholder="Բովանդակություն"
-                className="textarea__in"
+                className={c.textarea}
               ></textarea>
             </div>
 
-            <div className="services__section">
-              <p className="services__title">Ծառայություններ</p>
-              <div className="checkbox__grid">
-                <div className="footer__checkbox">
+            <div className={c.section2}>
+              <p className={c.services}>Ծառայություններ</p>
+              <div className={c.checkboxGrid}>
+                <div className={c.footerCheckbox}>
                   <input type="checkbox" id="sms" />
                   <label htmlFor="sms">SMS ծանուցումներ</label>
                 </div>
-                <div className="footer__checkbox">
+                <div className={c.footerCheckbox}>
                   <input type="checkbox" id="premium" />
                   <label htmlFor="premium">Պրեմիում / Կարճ համար</label>
                 </div>
-                <div className="footer__checkbox">
+                <div className={c.footerCheckbox}>
                   <input type="checkbox" id="callcenter" />
                   <label htmlFor="callcenter">Զանգերի կենտրոն</label>
                 </div>
-                <div className="footer__checkbox">
+                <div className={c.footerCheckbox}>
                   <input type="checkbox" id="other" />
                   <label htmlFor="other">Այլ</label>
                 </div>
               </div>
             </div>
 
-            <button type="submit" className="submit__btn" onClick={sendDataBtn}>
+            <button type="submit" className={c.submit} onClick={sendDataBtn}>
               Ուղարկել
             </button>
           </form>
         </article>
 
-        <article className="contact__map--part">
-          <div className="map__wrapper">
+        <div className={c.mapPart}>
+          <div className={c.mapWrapper}>
             <iframe
               src="https://yandex.com/map-widget/v1/?feedback=map%2Fedit&feedback-context=map.context&l=sat%2Cskl&ll=43.878471%2C40.380114&z=19"
               width="100%"
               height="100%"
               title="Yandex Map"
-              frameBorder="0"
             ></iframe>
           </div>
-        </article>
+        </div>
       </div>
     </section>
   );
