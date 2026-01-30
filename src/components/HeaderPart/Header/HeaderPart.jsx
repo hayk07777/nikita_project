@@ -15,7 +15,12 @@ export const HeaderPart = () => {
             <p>Բարձրացրեք ձեր վաճառքների ճանապարհը՝ 
             արդյունավետ հաղորդակցությամբ յուրաքանչյուր քայլում։</p>
 <div className={h.headerBtn}>
-<button>Կապ մեզ հետ </button><img src={pause} className={h.pause} alt="pause" />
+<button>Կապ մեզ հետ </button>
+<div className={h.pause}>
+
+<img src={pause}  alt="pause" />
+
+</div>
 
 
 </div>

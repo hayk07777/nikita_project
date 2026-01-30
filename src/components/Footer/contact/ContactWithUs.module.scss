@@ -154,11 +154,12 @@
     font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
-    transition: background 0.3s ease;
+    transition:  0.4s ;
 }
 
 .submit:hover {
     background-color: #1a56b5;
+    color: rgb(233, 195, 195);
 }
 
 .mapPart {

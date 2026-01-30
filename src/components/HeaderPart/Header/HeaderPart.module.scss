@@ -14,11 +14,19 @@
   }
 
   .pause {
+    @include flex-center();
     cursor: pointer;
+    background-color: #e4feff;
+    border-radius: 7px;
+    width: 50px;
+    transition: $tr-300;
+
+    height: 50px;
+    
   }
 }
 .pause:hover{
-  background-color: $blue-main; 
+  background-color: rgb(106, 163, 216); 
 
 }
 
@@ -51,6 +59,7 @@
 button:hover{
   background-color: rgb(148, 214, 236);
   color: $blue-main;
+
   
 }
 
