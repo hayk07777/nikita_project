@@ -1,0 +1,38 @@
+import styles from "./MainPart.module.scss";
+import pause from "../../../images/picture/pause.png";
+
+import firstGirl from "../../../images/picture/girl1.png";
+import { NavigationPanel } from "../../HeaderPart/NavPanel/NavigationPanel";
+import { HeaderAddPart } from "../../HeaderPart/HeaderAdd/HeaderAddPart";
+export const MainPart = () => {
+  return (
+    <header>
+      <HeaderAddPart />
+      <NavigationPanel className={styles.nav} />
+      <div className={styles.container}>
+        <div className={styles.textContainer}>
+          <h1>
+            <span className={styles.firstWord}>Խելացի մտքեր, Ձեր</span>
+            <span className={styles.secondWord}>բրենդնի համար💡</span>
+          </h1>
+          <p>
+            <span className={styles.firstWord}>Բարձրացրեք ձեր վաճառքների ճանապարհը՝</span>
+            <span className={styles.secondWord}>արդյունավետ հաղորդակցությամբ յուրաքանչյուր</span>
+            <span className={styles.thirdWord}>քայլում։</span>
+          </p>
+          <div className={styles.headerBtn}>
+<span className={styles.btnAnim}>
+<button>Կապ մեզ հետ </button>
+
+  </span>            <div className={`${styles.pause} ${styles.animePause} `}>
+              <img src={pause} alt="pause" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.imgCont}>
+          <img src={firstGirl} alt="firstGirl" className={styles.girl} />
+        </div>
+      </div>
+    </header>
+  );
+};

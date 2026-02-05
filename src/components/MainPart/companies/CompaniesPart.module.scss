@@ -1,0 +1,32 @@
+@use "../../../modules" as *;
+
+
+.container {
+  
+  max-width: $max-width;
+  margin: 40px auto;
+  height: 230px;
+line-height: 94px;
+
+}
+
+.title{
+  @include flex-center;
+  
+}
+
+.operators {
+  @include flex-center($gap: 20px);
+  margin-top: 24px;
+  flex-wrap: wrap;
+
+  img {
+    height: 25px;
+    opacity: 0.5;
+    transition: opacity $tr-300;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

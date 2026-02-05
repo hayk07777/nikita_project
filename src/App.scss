@@ -1,0 +1,31 @@
+@use "./modules" as mxs;
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  max-width: 1970px;
+  margin: 0 auto;
+  font-family:  "Montserrat", sans-serif;
+
+}
+
+@media (max-width: 768px) {
+   
+
+
+}

@@ -1,0 +1,42 @@
+@use "../../../modules" as *;
+
+
+.container {
+  max-width: $max-width;
+  margin: $layout;
+  @include flex-center;
+  flex-wrap: wrap;
+}
+
+.texts {
+  @include flex-center(column, 30px);
+  align-items: flex-start;
+  line-height: 22px;
+  p{
+    max-width: 470px;
+  }
+}
+
+.step {
+  background-color: $primary;
+  width: 64px;
+  border-radius: 17px;
+  text-align: center;
+  color: $white;
+}
+
+.btn {
+  padding: 12px 35px;
+  border: 1px solid $primary;
+  background: $white;
+  color: $primary;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: $tr-300;
+  font-weight: 600;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+}

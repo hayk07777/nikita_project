@@ -1,0 +1,47 @@
+@use "../../../modules" as *;
+
+
+.container {
+  @include flex-center($gap: 12px);
+ height: 40px;
+  color: $white;
+  background-color: $primary;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+    white-space: nowrap;
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 15px 20px;
+    gap: 10px;
+
+    p {
+      width: 100%;
+      max-width: 280px;
+      line-height: 1.4;
+      font-size: 15px;
+      text-align: left;
+    }
+
+    a {
+      align-self: flex-start;
+      font-size: 16px;
+    }
+  }
+}

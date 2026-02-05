@@ -1,0 +1,72 @@
+@use "../../../modules" as *;
+
+.container {
+  @include flex-center;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #f9f9fd;
+  height: 296px;
+
+  div {
+    flex: 1;
+    max-width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 152px;
+      background-color: #dcdcdc;
+    }
+  }
+
+  h2 {
+    font-size: 81px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+    color: rgb(99, 99, 99);
+    margin: 0;
+  }
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: 1s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+
+  &:hover {
+    background-color: $primary;
+    color: wheat;
+  }
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
