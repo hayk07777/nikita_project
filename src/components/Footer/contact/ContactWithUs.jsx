@@ -59,7 +59,6 @@ export const ContactWithUs = () => {
                     <div className={styles.item}>
                       <img src={armeniaFlag} alt="AM" />
                       <span>+374</span>
-                      <p>ddddddd</p>
                     </div>
                   </div>
                 </div>
@@ -75,6 +74,7 @@ export const ContactWithUs = () => {
             <div className={styles.field}>
               <label htmlFor="content">Բովանդակություն*</label>
               <textarea
+             
                 id="content"
                 name="content"
                 placeholder="Բովանդակություն"

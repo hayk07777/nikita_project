@@ -6,15 +6,29 @@
   margin: 0 auto;
 
   .container {
-    @include flex-center($gap: 40px);
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0 20px;
-    flex-wrap: nowrap;
+    @include flex-center($gap: 48px);
+    .header {
+      margin-bottom: 30px;
+      h1 {
+        font-size: 45px;
+        font-weight: 500;
+        color: $text-main;
+        line-height: 56px;
+        margin-bottom: 16px;
+      }
+      p {
+        line-height: 24px;
+        color: $text-secondary;
+        max-width: 400px;
+        font-size: 16px;
+      }
+    }
   }
+  
 
   .formSide {
-    flex: 1;
+    max-width: 610px;
+    height: 826px;
   }
 
   .row {
@@ -25,22 +39,6 @@
     }
   }
 
-  .header {
-    height: auto;
-    margin-bottom: 30px;
-    h1 {
-      font-size: 42px;
-      font-weight: 700;
-      color: $text-main;
-      margin: 0 0 10px 0;
-    }
-    p {
-      line-height: 24px;
-      color: $text-secondary;
-      max-width: 500px;
-      font-size: 16px;
-    }
-  }
 
   .field {
     margin-bottom: 20px;
@@ -48,6 +46,7 @@
       display: block;
       font-weight: 500;
       font-size: 14px;
+      line-height: 20px;
       color: $text-main;
       margin-bottom: 8px;
     }
@@ -60,6 +59,7 @@
       font-size: 16px;
       outline: none;
       transition: $tr-300;
+      
       &::placeholder {
         color: #bfbfbf;
       }
@@ -68,8 +68,8 @@
       }
     }
     textarea {
-      height: 100px;
       resize: none;
+      height: 112px;
     }
   }
 
@@ -179,15 +179,12 @@
   }
 
   .mapSide {
-    flex: 0 0 40%;
     .mapWrapper {
-      height: 100%;
-      min-height: 500px;
       border-radius: 16px;
       overflow: hidden;
       iframe {
-        width: 100%;
-        height: 100%;
+        height: 680px;
+        width: 598px;
         border: none;
       }
     }
