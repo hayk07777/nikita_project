@@ -1,8 +1,11 @@
-import { ContactWithUs } from './contact/ContactWithUs.jsx'
+import { ContactWithUs } from "./contact/ContactWithUs.jsx";
+import { SocialNetworks } from "./social/SocialNetworks.jsx";
 
 export const Footer = () => {
   return (
-<footer>
-    <ContactWithUs/>
-</footer>  )
-}
+    <footer>
+      <ContactWithUs />
+      <SocialNetworks />
+    </footer>
+  );
+};

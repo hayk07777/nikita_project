@@ -24,7 +24,9 @@
 }
 
 .card {
+  // width: calc(100% / 3 - 20px);
   width: 410px;
+
   @include flex-center(column, 17px);
   margin: 0 auto;
   background-color: $bg-body;

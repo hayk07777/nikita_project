@@ -5,38 +5,53 @@
   max-width: $max-width;
   margin: $layout;
   @include flex-center;
-  flex-wrap: wrap;
-}
-
-.texts {
-  @include flex-center(column, 30px);
-  align-items: flex-start;
-  line-height: 22px;
-  p{
-    max-width: 470px;
+  .texts {
+    @include flex-center(column);
+    align-items: flex-start;
+    width: 45%;
+    line-height: 22px;
+  
+    h2{
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 16px;
+    }
+    .text{
+      max-width: 470px;
+      margin-bottom: 40px;
+      font-size: 18px;
+      line-height: 26px;
+      color: $text-secondary;
+    }
   }
-}
-
-.step {
-  background-color: $primary;
-  width: 64px;
-  border-radius: 17px;
-  text-align: center;
-  color: $white;
-}
-
-.btn {
-  padding: 12px 35px;
-  border: 1px solid $primary;
-  background: $white;
-  color: $primary;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: $tr-300;
-  font-weight: 600;
-
-  &:hover {
-    background: $primary;
+  
+  .step {
+    background-color: $primary;
+    width: 64px;
+    border-radius: 17px;
+    font-size: 14px;
+    text-align: center;
     color: $white;
+    margin-bottom: 16px;
+  }
+  
+  .btn {
+    padding: 12px 35px;
+    border: 1px solid $primary;
+    background: $white;
+    color: $primary;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: $tr-300;
+    font-weight: 600;
+  
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+  .heco{
+    width: 48%;
+  
   }
 }

@@ -1,25 +1,25 @@
-import dc from "./Discount.module.scss";
-import boy from "../../../images/picture/boy2.png";
+import styles from "./Discount.module.scss";
+import {pictures} from "../../../assets/images"
 export const Discount = () => {
   return (
-    <section className={dc.container}>
-      <div className={dc.texts}>
-        <div className={dc.first}>
+    <section className={styles.container} id="how-it-works">
+      <div className={styles.texts}>
+        <div className={styles.first}>
           <span>Քայլ 1</span>
         </div>
-        <div className={dc.aboutContain}>
+        <div className={styles.aboutContain}>
           <h2>Գտիր ծածկագիրը խցանի տակ</h2>
-          <p className={dc.aboutDiscount}>
+          <p className={styles.aboutDiscount}>
             Mobile ID-ն անձի նույնականացման, ինչպես նաև էլեկտրոնային եղանակով
             ստորագրելու հարթակ է: Համակարգը հնարավորություն է տալիս ստորագրել
             ցանկացած փաստաթուղթ առանց հավելյալ ջանքերի:
           </p>
-          <button className={dc.btn}>Իմանալ ավելին</button>
+          <button className={styles.btn}>Իմանալ ավելին</button>
         </div>
       </div>
-      <div className={dc.img}>
+      <div className={styles.img}>
         <article>
-          <img src={boy} alt="boy" />
+          <img src={pictures.boy2} alt="boy" />
         </article>
       </div>
     </section>

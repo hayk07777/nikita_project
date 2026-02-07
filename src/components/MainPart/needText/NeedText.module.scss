@@ -2,11 +2,9 @@
 
 
 .section {
-  @include flex-center($gap: 40px);
-  padding: 40px 20px;
+  @include flex-center;
   max-width: $max-width;
-  margin: 40px auto 0;
-  flex-wrap: wrap;
+  margin: $layout;
 
   @include mobile {
     flex-direction: column-reverse;
@@ -14,56 +12,53 @@
     gap: 30px;
     margin-top: 20px;
   }
-}
-
-.container {
-  flex: 1;
-  min-width: 300px;
-  @include flex-center(column, 25px);
-  align-items: flex-start;
-
-  h2 {
-    font-size: clamp(24px, 5vw, 40px);
-    line-height: 1.2;
-    margin: 0;
+  .label {
+    color: $primary;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  
   }
+  .container {
+    width: 33%;
+    @include flex-center(column);
+    align-items: flex-start;
+  
+    h2 {
+      font-size: 45px;
+      line-height: 56px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+  
+    @include mobile {
+      align-items: center;
+    }
+  }
+  .description {
+    font-weight: 400;
+    line-height: 26px;
+    color: $text-secondary;
+    max-width: 440px;
+    font-size: 18px;
+    margin-bottom: 52px;
+  
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+  
+  .img{
+      width: 65%;
+    @include flex-center;
+  
 
-  @include mobile {
-    align-items: center;
+  }
+  
+  .btn{
+  @include moreLearnBtn 
+  
   }
 }
 
-.label {
-  color: $primary;
-  font-weight: 600;
-  // margin: 0 auto;
-}
 
-.description {
-  line-height: 1.6;
-  color: #555;
-  max-width: 500px;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 0 auto;
-  }
-}
-
-.img{
-  flex: 1;
-  min-width: 300px;
-  @include flex-center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
-}
-
-.btn{
-@include moreLearnBtn 
-
-}

@@ -43,10 +43,11 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
-  background-color: aquamarine;
-  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  background-color: $primary;
+  color: $white;
+  border-radius: 10%;
   border: none;
   cursor: pointer;
   z-index: 1000;
@@ -61,7 +62,7 @@
 
   &:hover {
     background-color: $primary;
-    color: wheat;
+    color: #000;
   }
 }
 

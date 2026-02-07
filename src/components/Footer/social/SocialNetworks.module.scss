@@ -1,0 +1,28 @@
+@use "../../../modules" as *;
+
+.container{
+    @include flex-center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background-color: #F9F9FD;
+    max-width: $max-width;
+    margin: 0 auto;
+    .textsContainer{
+        width: 80%;
+      p{
+        font-size: 14px;
+        line-height: 20px;
+        color: $text-secondary;
+        span{
+            color: black;
+            font-weight: 600;
+        }
+      }
+    }
+    .iconsContainer{
+        width: 20%;
+        @include flex-center;
+    }
+}

@@ -1,14 +1,14 @@
-import styles from "./HeaderAdd.module.scss";
+import styles from "./AddPart.module.scss";
 
-export const HeaderAddPart = () => {
+export const AddPart = () => {
   return (
-    <header>
+    <section>
       <div className={styles.container}>
         <p>Հատուկ առաջարկ` 🔥 Բարձրացրեք Ձեր փորձառությունը Nikita-ի հետ</p>
-        <a href="#">
+        <a href="https://nikita.am/en/home">
           Տեսնել ավելին <span>➚</span>
         </a>
       </div>
-    </header>
+    </section>
   );
 };

@@ -1,9 +1,9 @@
 import styles from "./ContactWithUs.module.scss";
-import armeniaFlag from "../../../images/picture/flag.png";
+import {pictures} from "../../../assets/images"
 
 export const ContactWithUs = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="contact">
       <div className={styles.container}>
         <div className={styles.formSide}>
           <header className={styles.header}>
@@ -51,13 +51,13 @@ export const ContactWithUs = () => {
               <div className={styles.phoneInput}>
                 <div className={styles.wrapperDropdown}>
                   <button type="button" className={styles.dropdownBtn}>
-                    <img src={armeniaFlag} alt="AM" />
+                    <img src={pictures.flag} alt="AM" />
                     <span>+374</span>
                     <span className={styles.arrow}>▼</span>
                   </button>
                   <div className={styles.content}>
                     <div className={styles.item}>
-                      <img src={armeniaFlag} alt="AM" />
+                      <img src={pictures.flag} alt="AM" />
                       <span>+374</span>
                     </div>
                   </div>

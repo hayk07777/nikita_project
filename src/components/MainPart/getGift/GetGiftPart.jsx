@@ -1,12 +1,12 @@
 import gift from "./GetGiftPart.module.scss";
-import hecoPic from "../../../images/picture/heco.png";
+import {pictures} from "../../../assets/images";
 export const GetGiftPart = () => {
   return (
     <section className={gift.container}>
       <div className={gift.texts}>
         <p className={gift.step}>Քայլ 3</p>
         <h2>Ստացիր Քո մրցանակը</h2>
-        <p>
+        <p className={gift.text}>
           Mobile ID-ն անձի նույնականացման, ինչպես նաև  էլեկտրոնային
           եղանակով ստորագրելու հարթակ է:  Համակարգը հնարավորություն է
           տալիս ստորագրել
@@ -16,7 +16,7 @@ export const GetGiftPart = () => {
         <button className={gift.btn}>Իմանալ ավելին</button>
       </div>
       <div>
-        <img src={hecoPic} alt="heco" />
+        <img src={pictures.heco} alt="heco" />
       </div>
     </section>
   );

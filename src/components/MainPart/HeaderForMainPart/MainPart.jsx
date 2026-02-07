@@ -1,14 +1,9 @@
 import styles from "./MainPart.module.scss";
-import pause from "../../../images/picture/pause.png";
-
-import firstGirl from "../../../images/picture/girl1.png";
-import { NavigationPanel } from "../../HeaderPart/NavPanel/NavigationPanel";
-import { HeaderAddPart } from "../../HeaderPart/HeaderAdd/HeaderAddPart";
+import { pictures } from "../../../assets/images";
 export const MainPart = () => {
   return (
-    <header>
-      <HeaderAddPart />
-      <NavigationPanel className={styles.nav} />
+    <section id="about">
+      
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <h1>
@@ -25,14 +20,14 @@ export const MainPart = () => {
 <button>Կապ մեզ հետ </button>
 
   </span>            <div className={`${styles.pause} ${styles.animePause} `}>
-              <img src={pause} alt="pause" />
+              <img src={pictures.pause} alt="pause" />
             </div>
           </div>
         </div>
         <div className={styles.imgCont}>
-          <img src={firstGirl} alt="firstGirl" className={styles.girl} />
+          <img src={pictures.girl1} alt="firstGirl" className={styles.girl} />
         </div>
       </div>
-    </header>
+    </section>
   );
 };

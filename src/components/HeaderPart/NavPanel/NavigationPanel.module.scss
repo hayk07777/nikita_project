@@ -9,23 +9,21 @@
   &.scrolled{
     top:0;
   }
-}
-
-.container {
-  max-width: $max-width;
-  margin: 0 auto;
-  @include flex-center(row, 15px);
-  justify-content: space-between;
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    @include flex-center(row, 15px);
+    justify-content: space-between;
+    
+    padding: 15px;
+    background: $white;
   
-  padding: 15px;
-  background: $white;
-
-  
-  .logo img {
-    width: 130px;
+    
+    .logo img {
+      width: 130px;
+    }
   }
 }
-
 .menu {
   @include flex-center;
   .list {
@@ -57,6 +55,8 @@
       }
     }
   }
+
+
 
   @media (max-width: 1024px) {
 

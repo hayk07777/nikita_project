@@ -1,26 +1,19 @@
 import comp from "./CompaniesPart.module.scss";
-import facebookLogo from "../../../images/logo/facebookLogo.png";
-import vivaLogo from "../../../images/logo/vivaLogo.png";
-import gmailLogo from "../../../images/logo/gmailLogo.png";
-import gmail from "../../../images/logo/gmail.png";
-import team from "../../../images/logo/teamLogo.png";
-import eurovision from "../../../images/logo/eurovisionLogo.png";
-import ucom from "../../../images/logo/ucomLogo.png";
-
+import { logos } from "../../../assets/images";
 export const CompaniesPart = () => {
   return (
-    <section className={comp.container}>
+    <section className={comp.container} id="partners">
       <div className={comp.title}>
         <p>Միացե՛ք արդեն աճող 4000+ ընկերություններին</p>
       </div>
       <div className={comp.operators}>
-        <img src={facebookLogo} alt="facebookLogo" />
-        <img src={vivaLogo} alt="vivaLogo" />
-        <img src={gmailLogo} alt="gmailLogo" />
-        <img src={gmail} alt="gmail" />
-        <img src={team} alt="team" />
-        <img src={eurovision} alt="eurovision" />
-        <img src={ucom} alt="ucom " />
+        <img src={logos.facebookLogo} alt="facebookLogo" />
+        <img src={logos.vivaLogo} alt="vivaLogo" />
+        <img src={logos.gmailLogo} alt="gmailLogo" />
+        <img src={logos.gmail} alt="gmail" />
+        <img src={logos.teamLogo} alt="team" />
+        <img src={logos.eurovisionLogo} alt="eurovision" />
+        <img src={logos.ucomLogo} alt="ucom " />
       </div>
     </section>
   );

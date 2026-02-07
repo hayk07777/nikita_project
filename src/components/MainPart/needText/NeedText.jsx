@@ -1,6 +1,5 @@
 import need from "./NeedText.module.scss";
-import commandPic from "../../../images/picture/commandPic.png";
-
+import { pictures } from "../../../assets/images";
 export const NeedText = () => {
   return (
     <section className={need.section}>
@@ -15,7 +14,7 @@ export const NeedText = () => {
         <button className={need.btn}>Իմանալ ավելին</button>
       </div>
       <div className={need.img}>
-        <img src={commandPic} alt={need.commandPic} />
+        <img src={pictures.commandPic} alt={need.commandPic} />
       </div>
     </section>
   );

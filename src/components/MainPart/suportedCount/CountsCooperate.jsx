@@ -38,7 +38,7 @@ export const CountsCooperate = () => {
         onClick={scrollToTop}
         className={`${style.scrollTop} ${btnTop ? style.visible : ""}`}
       >
-        ↑
+        ˄
       </button>
     </section>
   );
