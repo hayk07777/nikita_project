@@ -6,7 +6,7 @@ export const SendLifePart = () => {
       <div className={styles.content}>
         <div className={styles.containerCards}>
           <div className={styles.image}>
-            <img src={pictures.inp} alt="Form" className={styles.inp__img} />
+            <img src={pictures.inp} alt="Form"  />
           </div>
 
           <div className={styles.codeContainer}>
@@ -14,7 +14,7 @@ export const SendLifePart = () => {
               <span>Քայլ 2</span>
             </div>
             <div className={styles.rightTitle}>
-              <h2>Մուտքագրեք ծածկագիրը մեր պլատֆորմում</h2>
+              <h2 className={styles.title}>Մուտքագրեք ծածկագիրը մեր պլատֆորմում</h2>
             </div>
             <div className={styles.about}>
               

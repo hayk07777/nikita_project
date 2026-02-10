@@ -1,64 +1,50 @@
 @use "../../../modules" as *;
 
-
 .section {
-  @include flex-center;
-  max-width: $max-width;
-  margin: $layout;
-
-  @include mobile {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 30px;
-    margin-top: 20px;
-  }
-  .label {
-    color: $primary;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
+  @include container;
+  padding-top: 80px; 
+  padding-bottom: 80px; 
   
-  }
-  .container {
-    width: 33%;
+  @include flex-center($gap: 20px);
+
+  .containerTexts {
+    width: 35%;
     @include flex-center(column);
     align-items: flex-start;
-  
-    h2 {
+
+    .label {
+      color: $primary;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .title {
       font-size: 45px;
       line-height: 56px;
       font-weight: 500;
       margin-bottom: 16px;
     }
-  
-    @include mobile {
-      align-items: center;
-    }
-  }
-  .description {
-    font-weight: 400;
-    line-height: 26px;
-    color: $text-secondary;
-    max-width: 440px;
-    font-size: 18px;
-    margin-bottom: 52px;
-  
-    @include mobile {
-      margin: 0 auto;
-    }
-  }
-  
-  .img{
-      width: 65%;
-    @include flex-center;
-  
 
+    .description {
+      font-weight: 400;
+      line-height: 26px;
+      color: $text-secondary;
+      font-size: 18px;
+      margin-bottom: 52px;
+
+      @include mobile {
+        margin: 0 auto;
+      }
+    }
+
+    .btn {
+      @include moreLearnBtn;
+    }
   }
-  
-  .btn{
-  @include moreLearnBtn 
-  
+
+  .img {
+    width: 62%;
+    @include flex-center;
   }
 }
-
-

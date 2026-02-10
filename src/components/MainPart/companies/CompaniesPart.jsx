@@ -1,12 +1,12 @@
-import comp from "./CompaniesPart.module.scss";
+import styles from "./CompaniesPart.module.scss";
 import { logos } from "../../../assets/images";
 export const CompaniesPart = () => {
   return (
-    <section className={comp.container} id="partners">
-      <div className={comp.title}>
-        <p>Միացե՛ք արդեն աճող 4000+ ընկերություններին</p>
+    <section className={styles.container} id="partners">
+      <div className={styles.titleContain}>
+        <h1 className={styles.title}>Միացե՛ք արդեն աճող <span> 4000+</span> ընկերություններին</h1>
       </div>
-      <div className={comp.operators}>
+      <div className={styles.operators}>
         <img src={logos.facebookLogo} alt="facebookLogo" />
         <img src={logos.vivaLogo} alt="vivaLogo" />
         <img src={logos.gmailLogo} alt="gmailLogo" />

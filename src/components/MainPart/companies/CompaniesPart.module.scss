@@ -1,27 +1,35 @@
 @use "../../../modules" as *;
 
 .container {
-  max-width: $max-width;
-  margin: 40px auto;
-  height: 230px;
+  @include container();
   line-height: 94px;
-  .title {
+
+  .titleContain {
     @include flex-center;
+    margin-top: 70px;
+
+    .title {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      opacity: 0.5;
+    }
   }
+
   .operators {
     @include flex-center($gap: 20px);
+    justify-content: space-between;
     margin-top: 24px;
-    flex-wrap: wrap;
-  
+    margin-bottom: 60px;
+
     img {
       height: 25px;
       opacity: 0.5;
       transition: opacity $tr-300;
-  
+
       &:hover {
         opacity: 1;
       }
     }
   }
 }
-

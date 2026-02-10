@@ -8,7 +8,7 @@ export const Discount = () => {
           <span>Քայլ 1</span>
         </div>
         <div className={styles.aboutContain}>
-          <h2>Գտիր ծածկագիրը խցանի տակ</h2>
+          <h2 className={styles.title}>Գտիր ծածկագիրը խցանի տակ</h2>
           <p className={styles.aboutDiscount}>
             Mobile ID-ն անձի նույնականացման, ինչպես նաև էլեկտրոնային եղանակով
             ստորագրելու հարթակ է: Համակարգը հնարավորություն է տալիս ստորագրել

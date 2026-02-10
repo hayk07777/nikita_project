@@ -1,75 +1,64 @@
 @use "../../../modules" as *;
 
-
 .container {
-  @include flex-center;
-  gap: 20px;
-  max-width: $max-width;
-  margin: 56px auto;
-  flex-wrap: wrap;
-
-
-
+  @include flex-center($gap: 20px);
+  @include container();
+  margin-top: 70px;
 
   .img {
-    max-width: 48%;
+    width: calc(50% - 10px);
     max-height: 572px;
   }
-  
+
   .texts {
     @include flex-center(column, 30px);
-    align-items: flex-start; 
+    align-items: flex-start;
     width: 48%;
-    h2{
+
+    .title {
       line-height: 47px;
       font-size: 36px;
       max-width: 470px;
-      line-height: 44px;
     }
-    
-  }
-  .first {
-    background-color: #00BA85; 
-    @include flex-center;
-    span{
-      font-size: 14px;
-      line-height: 20px;
+
+    .first {
+      background-color: #00BA85;
+      @include flex-center;
+      width: 60px;
+      height: 28px;
+      border-radius: 17px;
+      text-align: center;
+      color: $white;
+
+      span {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
-    width: 60px;
-    height: 28px;
-    border-radius: 17px;
-    text-align: center;
-    color: $white;
-  }
-  .aboutDiscount {
-    margin-top: 16px;
-    max-width: 520px;
-   font-size: 18px;
-   line-height: 26px;
-  color: #4A5461;
-    height: 130px;
-  
-  
-  }
-  .btn {
-    margin-top: 40px;
-    height: 48px;
-    width: 180px;
-    color: $primary;
-    border: solid 1px $primary;
-    border-radius: 7px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all $tr-300;
-  
-    &:hover {
-      background-color: #13489d;
-      color:$white;
+
+    .aboutDiscount {
+      margin-top: 16px;
+      max-width: 520px;
+      font-size: 18px;
+      line-height: 26px;
+      color: $text-secondary;
+    }
+
+    .btn {
+      margin-top: 40px;
+      height: 48px;
+      width: 180px;
+      color: $primary;
+      border: solid 1px $primary;
+      border-radius: 7px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all $tr-300;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
     }
   }
 }
-
-
-
-
-
