@@ -4,7 +4,7 @@ export const ServicesPart = () => {
   return (
     <section className={styles.container} id="services">
       <div className={styles.title}>
-        <p>Մեր ծառայությունները 🚀</p>
+        Մեր ծառայությունները 🚀
       </div>
 
       <div className={styles.wrapper}>

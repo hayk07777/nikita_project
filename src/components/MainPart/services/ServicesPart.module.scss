@@ -6,44 +6,48 @@
   margin: 0 auto;
   @include flex-center(column, 60px);
   margin-top: 32px;
-}
 
-.title {
-  p {
+  .title {
     font-size: 36px;
     line-height: 44px;
     font-weight: bold;
     text-align: center;
     margin: 0;
   }
-}
 
-.wrapper {
-  @include flex-center($gap: 20px);
-  flex-wrap: wrap;
-}
+  .wrapper {
+    @include flex-center($gap: 20px);
 
-.card {
-  // width: calc(100% / 3 - 20px);
-  width: 410px;
+    .card {
+      width: calc(100% / 3 - 20px);
+      //width: 410px;
 
-  @include flex-center(column, 17px);
-  margin: 0 auto;
-  background-color: $bg-body;
-  border-radius: 17px;
-  text-align: center;
-  height: 432px;
-  h2{
-    font-size: 28px;
-    font-style: bold;
-    font-weight: 700;
-    line-height: 36px;
+      @include flex-center(column, 17px);
+      margin: 0 auto;
+      background-color: $bg-body;
+      border-radius: 17px;
+      text-align: center;
+      height: 432px;
+      h2{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+
+      p {
+        padding: 0 64px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+    }
   }
-  
-  p {
-    padding: 0 64px;
-    font-size: 16px;
-    line-height: 24px;
+
+  @media screen and (max-width: 1050px){
+    .wrapper{
+      .card{
+        width: 100%;
+      }
+    }
   }
- 
 }

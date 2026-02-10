@@ -4,7 +4,6 @@
   @include flex-center($gap: 50px);
   text-align: start;
   max-width: $max-width;
-  margin: 0 auto; 
   margin-top: 150px;
 
 
@@ -19,8 +18,11 @@
       border-radius: 7px;
       width: 50px;
       transition: $tr-300;
-
       height: 50px;
+
+      &:hover {
+        background-color: rgb(106, 163, 216);
+      }
     }
 
     h1 {
@@ -35,14 +37,29 @@
       color: #4A5461;
       line-height: 26px;
     }
+
+    .headerBtn {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+
+      button {
+        width: 170px;
+        height: 52px;
+        cursor: pointer;
+        background-color: $primary;
+        border-radius: 7px;
+        border: none;
+        color: $white;
+        letter-spacing: 2px;
+        transition: all 0.4s;
+      }
+    }
   }
   .imgCont{
     width: 48%; 
   }
 
-  .pause:hover {
-    background-color: rgb(106, 163, 216);
-  }
 }
 
 .firstWord {
@@ -94,29 +111,8 @@
   }
 }
 
-.headerBtn {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-
-  button {
-    width: 170px;
-    height: 52px;
-    cursor: pointer;
-    background-color: $primary;
-    border-radius: 7px;
-    border: none;
-    color: $white;
-    letter-spacing: 2px;
-    transition: all 0.4s;
-  }
-}
 
 button:hover {
   background-color: rgb(148, 214, 236);
   color: $primary;
-}
-
-.img {
-  max-width: 620px;
 }
