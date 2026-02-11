@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import nav from "./NavigationPanel.module.scss";
-import {logos} from "../../../assets/images"
+import styles from "./NavigationPanel.module.scss";
+import {FirmaLogo} from "../../../assets/images/logo";
 
 export const NavigationPanel = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,14 +26,14 @@ return () => {
 
   return (
     
-    <div className={`${nav.wrapper} ${isScrolled ? nav.scrolled : ""}`}>
-      <nav className={nav.container}>
-  <a href="/" className={nav.logo} onClick={closeMenu}>
-    <img src={logos.firma} alt="logoFirm" />
+    <div className={`${styles.wrapper} ${isScrolled ? styles.scrolled : ""}`}>
+      <nav className={styles.container}>
+  <a href="/" className={styles.logo} onClick={closeMenu}>
+    <img src={FirmaLogo} alt="logoFirm" />
   </a>
 
-  <div className={`${nav.menu} ${isOpen ? nav.open : ""}`}>
-    <ul className={nav.list}>
+  <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
+    <ul className={styles.list}>
       <li>
         <a href="#services" onClick={closeMenu}>
           Մեր ծառայությունները
@@ -62,16 +61,16 @@ return () => {
       </li>
     </ul>
 
-    <div className={nav.mobile}>
+    <div className={styles.mobile}>
       <span className="lang-box">ՀՅ</span>
       <span className="phone-box">✆ {telNum}</span>
     </div>
   </div>
 
-  <div className={nav.desktop}>
-    <div className={nav.langDropdown}>
+  <div className={styles.desktop}>
+    <div className={styles.langDropdown}>
       <p>ՀՅ</p>
-      <div className={nav.dropdownContent}>
+      <div className={styles.dropdownContent}>
         <button>RU</button>
         <button>EN</button>
       </div>
@@ -80,17 +79,17 @@ return () => {
   </div>
 
   <div
-    className={`${nav.burger} ${isOpen ? nav.active : ""}`}
+    className={`${styles.burger} ${isOpen ? styles.active : ""}`}
     onClick={toggleMenu}
   >
-    <span className={nav.bar}></span>
-    <span className={nav.bar}></span>
-    <span className={nav.bar}></span>
+    <span className={styles.bar}></span>
+    <span className={styles.bar}></span>
+    <span className={styles.bar}></span>
   </div>
 </nav>
 
       <div 
-        className={`${nav.overlay} ${isOpen ? nav.active : ""}`} 
+        className={`${styles.overlay} ${isOpen ? styles.active : ""}`} 
         onClick={closeMenu}
       ></div>
     </div>

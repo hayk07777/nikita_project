@@ -1,5 +1,5 @@
 import styles from "./ContactWithUs.module.scss";
-import {pictures} from "../../../assets/images"
+import {FlagPic} from "../../../assets/images/picture"
 
 export const ContactWithUs = () => {
   return (
@@ -51,13 +51,13 @@ export const ContactWithUs = () => {
               <div className={styles.phoneInput}>
                 <div className={styles.wrapperDropdown}>
                   <button type="button" className={styles.dropdownBtn}>
-                    <img src={pictures.flag} alt="AM" />
+                    <img src={FlagPic} alt="AM" />
                     <span>+374</span>
                     <span className={styles.arrow}>▼</span>
                   </button>
                   <div className={styles.content}>
                     <div className={styles.item}>
-                      <img src={pictures.flag} alt="AM" />
+                      <img src={FlagPic} alt="AM" />
                       <span>+374</span>
                     </div>
                   </div>

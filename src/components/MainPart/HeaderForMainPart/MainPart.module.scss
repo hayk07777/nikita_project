@@ -9,13 +9,13 @@
   .textContainer {
     width: calc(50% - 10px);
 
-    h1 {
+    .title {
       font-weight: 500;
       font-size: 57px;
       line-height: 72px;
     }
 
-    p {
+    .description {
       margin-top: 8px;
       font-size: 18px;
       color: #4a5461;

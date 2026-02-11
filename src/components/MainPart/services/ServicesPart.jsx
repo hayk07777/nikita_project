@@ -1,5 +1,5 @@
 import styles from "./ServicesPart.module.scss";
-import { pictures } from "../../../assets/images";
+import { Card1Pic,Card2Pic,Card3Pic } from "../../../assets/images/picture";
 export const ServicesPart = () => {
   return (
     <section className={styles.container} id="services">
@@ -9,7 +9,7 @@ export const ServicesPart = () => {
 
       <div className={styles.wrapper}>
         <div className={styles.card}>
-          <img src={pictures.card1} alt="card1" />
+          <img src={Card1Pic} alt="card1" />
           <h2 className={styles.title}>ՍՄՍ և Վեբ</h2>
           <p className={styles.about}>
             Բաժանորդներին հնարավորություն է տրվում հաղորդագրություն ուղարկել և՛
@@ -18,7 +18,7 @@ export const ServicesPart = () => {
         </div>
 
         <div className={styles.card}>
-          <img src={pictures.card2} alt="card2" />
+          <img src={Card2Pic} alt="card2" />
           <h2 className={styles.title}>Վեբ</h2>
           <p className={styles.about}>
             Բաժանորդներին հնարավորություն է տրվում հաղորդագրություն ուղարկել
@@ -27,7 +27,7 @@ export const ServicesPart = () => {
         </div>
 
         <div className={styles.card}>
-          <img src={pictures.card3} alt="card3" />
+          <img src={Card3Pic} alt="card3" />
           <h2 className={styles.title}>ՍՄՍ</h2>
           <p className={styles.about}>
             Բաժանորդներին հնարավորություն է տրվում հաղորդագրություն ուղարկել

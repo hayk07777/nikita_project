@@ -1,4 +1,4 @@
-import { icons } from "../../../assets/images";
+import { InstagramIcon, FacebookIcon, LinkedInIcon, YouTubeIcon,TikTokIcon } from "../../../assets/images/icons";
 import styles from "./SocialNetworks.module.scss"
 export const SocialNetworks = () => {
   return (
@@ -12,18 +12,18 @@ export const SocialNetworks = () => {
 </div>
 <div className={styles.iconsContainer}>
     <a href="https://www.instagram.com/">
-    <img src={icons.InstagramIcon} alt="instagram" /></a>
+    <img src={InstagramIcon} alt="instagram" /></a>
     <a href="https://www.facebook.com/">
-        <img src={icons.FacebookIcon} alt="Facebook" />
+        <img src={FacebookIcon} alt="Facebook" />
     </a>
     <a href="https://www.linkedin.com/">
-        <img src={icons.LinkedinIcon} alt="In" />
+        <img src={LinkedInIcon} alt="In" />
     </a>
     <a href="https://www.youtube.com/">
-        <img src={icons.YouTubeIcon} alt="YouTube" />
+        <img src={YouTubeIcon} alt="YouTube" />
     </a>
     <a href="https://www.tiktok.com/">
-        <img src={icons.TikTokIcon} alt="TikTok" />
+        <img src={TikTokIcon} alt="TikTok" />
     </a>
 </div>
 

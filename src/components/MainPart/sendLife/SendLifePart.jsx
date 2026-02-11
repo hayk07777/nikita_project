@@ -1,12 +1,12 @@
 import styles from "./SendLifePart.module.scss";
-import { pictures } from "../../../assets/images";
+import { InpPic } from "../../../assets/images/picture";
 export const SendLifePart = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.containerCards}>
           <div className={styles.image}>
-            <img src={pictures.inp} alt="Form"  />
+            <img src={InpPic} alt="Form"  />
           </div>
 
           <div className={styles.codeContainer}>

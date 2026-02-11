@@ -1,33 +1,33 @@
 import styles from "./MainPart.module.scss";
-import { pictures } from "../../../assets/images";
+import { PausePic,Girl1Pic } from "../../../assets/images/picture";
 
 export const MainPart = () => {
   return (
     <section id="about">
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <h1>
+          <h1 className={styles.title}>
             <span className={styles.firstWord}>Խելացի մտքեր, Ձեր</span>
             <span className={styles.secondWord}>բրենդնի համար💡</span>
           </h1>
-          <p>
-            <span className={styles.pFirstWord}>
+          <p className={styles.description}>
+            <span className={styles.firstWord}>
               Բարձրացրեք ձեր վաճառքների ճանապարհը՝
             </span>{" "}
-            <span className={styles.pSecondWord}>
+            <span className={styles.secondWord}>
               արդյունավետ հաղորդակցությամբ յուրաքանչյուր
             </span>{" "}
-            <span className={styles.pThirdWord}>քայլում։</span>
+            <span className={styles.thirdWord}>քայլում։</span>
           </p>
           <div className={styles.headerBtn}>
             <button className={styles.btnAnim}>Կապ մեզ հետ </button>
             <div className={`${styles.pause} ${styles.animePause} `}>
-              <img src={pictures.pause} alt="pause" />
+              <img src={PausePic} alt="pause" />
             </div>
           </div>
         </div>
         <div className={styles.imgCont}>
-          <img src={pictures.girl1} alt="firstGirl" className={styles.girl} />
+          <img src={Girl1Pic} alt="firstGirl" className={styles.girl} />
         </div>
       </div>
     </section>

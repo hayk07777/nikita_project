@@ -1,5 +1,5 @@
 import styles from "./GetGiftPart.module.scss";
-import {pictures} from "../../../assets/images";
+import {HecoPic} from "../../../assets/images/picture";
 export const GetGiftPart = () => {
   return (
     <section className={styles.container}>
@@ -16,7 +16,7 @@ export const GetGiftPart = () => {
         <button className={styles.btn}>Իմանալ ավելին</button>
       </div>
       <div className={styles.imgCont}>
-        <img src={pictures.heco} alt="heco" />
+        <img src={HecoPic} alt="heco" />
       </div>
     </section>
   );

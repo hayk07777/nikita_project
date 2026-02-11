@@ -1,5 +1,5 @@
 import styles from "./Discount.module.scss";
-import {pictures} from "../../../assets/images"
+import {Boy2Pic} from "../../../assets/images/picture"
 export const Discount = () => {
   return (
     <section className={styles.container} id="how-it-works">
@@ -19,7 +19,7 @@ export const Discount = () => {
       </div>
       <div className={styles.img}>
         <article>
-          <img src={pictures.boy2} alt="boy" />
+          <img src={Boy2Pic} alt="boy" />
         </article>
       </div>
     </section>
