@@ -1,5 +1,5 @@
 import styles from "./SendLifePart.module.scss";
-import { InpPic } from "../../../assets/images/picture";
+import { InpPic } from "../../../assets/images/index";
 export const SendLifePart = () => {
   return (
     <section className={styles.container}>

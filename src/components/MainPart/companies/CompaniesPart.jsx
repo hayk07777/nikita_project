@@ -1,5 +1,5 @@
 import styles from "./CompaniesPart.module.scss";
-import { EurovisionLogo,VivaLogo,UcomLogo,TeamLogo,GmailLogo,Gmail,FacebookLogo, } from "../../../assets/images/logo";
+import { EurovisionLogo,VivaLogo,UcomLogo,TeamLogo,GmailLogo,Gmail,FacebookLogo, } from "../../../assets/images/index";
 export const CompaniesPart = () => {
   return (
     <section className={styles.container} id="partners">

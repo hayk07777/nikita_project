@@ -1,5 +1,5 @@
 import styles from "./MainPart.module.scss";
-import { PausePic,Girl1Pic } from "../../../assets/images/picture";
+import { PausePic,Girl1Pic } from "../../../assets/images/index";
 
 export const MainPart = () => {
   return (

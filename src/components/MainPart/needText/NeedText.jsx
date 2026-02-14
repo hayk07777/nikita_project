@@ -1,5 +1,5 @@
 import styles from "./NeedText.module.scss";
-import { CommandPic } from "../../../assets/images/picture";
+import { CommandPic } from "../../../assets/images/index";
 export const NeedText = () => {
   return (
     <section className={styles.section}>

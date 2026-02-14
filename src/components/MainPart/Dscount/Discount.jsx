@@ -1,5 +1,5 @@
 import styles from "./Discount.module.scss";
-import {Boy2Pic} from "../../../assets/images/picture"
+import {Boy2Pic} from "../../../assets/images/index"
 export const Discount = () => {
   return (
     <section className={styles.container} id="how-it-works">

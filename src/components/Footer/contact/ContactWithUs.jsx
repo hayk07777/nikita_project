@@ -1,5 +1,5 @@
 import styles from "./ContactWithUs.module.scss";
-import {FlagPic} from "../../../assets/images/picture"
+import {FlagPic} from "../../../assets/images/index"
 
 export const ContactWithUs = () => {
   return (

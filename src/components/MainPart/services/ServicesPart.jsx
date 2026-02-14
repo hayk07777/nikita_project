@@ -1,5 +1,5 @@
 import styles from "./ServicesPart.module.scss";
-import { Card1Pic,Card2Pic,Card3Pic } from "../../../assets/images/picture";
+import { Card1Pic,Card2Pic,Card3Pic } from "../../../assets/images/index";
 export const ServicesPart = () => {
   return (
     <section className={styles.container} id="services">

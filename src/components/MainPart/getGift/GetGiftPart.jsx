@@ -1,5 +1,5 @@
 import styles from "./GetGiftPart.module.scss";
-import {HecoPic} from "../../../assets/images/picture";
+import {HecoPic} from "../../../assets/images/index";
 export const GetGiftPart = () => {
   return (
     <section className={styles.container}>

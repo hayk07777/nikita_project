@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./NavigationPanel.module.scss";
-import {FirmaLogo} from "../../../assets/images/logo";
+import {FirmaLogo} from "../../../assets/images/index";
 
 export const NavigationPanel = () => {
   const [isOpen, setIsOpen] = useState(false);

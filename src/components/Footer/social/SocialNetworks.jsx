@@ -1,4 +1,4 @@
-import { InstagramIcon, FacebookIcon, LinkedInIcon, YouTubeIcon,TikTokIcon } from "../../../assets/images/icons";
+import { InstagramIcon, FacebookIcon, LinkedInIcon, YouTubeIcon,TikTokIcon } from "../../../assets/images/index";
 import styles from "./SocialNetworks.module.scss"
 export const SocialNetworks = () => {
   return (
