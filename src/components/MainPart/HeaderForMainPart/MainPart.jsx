@@ -7,8 +7,8 @@ export const MainPart = () => {
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
-            <span className={styles.firstWord}>Խելացի մտքեր, Ձեր</span>
-            <span className={styles.secondWord}>բրենդնի համար💡</span>
+            <span className={styles.firstWord}>Խելացի մտքեր, Ձեր բրենդնի</span>
+            <span className={styles.secondWord}> համար💡</span>
           </h1>
           <p className={styles.description}>
             <span className={styles.firstWord}>

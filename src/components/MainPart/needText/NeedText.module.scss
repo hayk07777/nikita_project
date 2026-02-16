@@ -8,13 +8,13 @@
   @include flex-center($gap: 20px);
 
   .containerTexts {
-    width: 35%;
+    width: 42%;
     @include flex-center(column);
     align-items: flex-start;
 
     .label {
       color: $primary;
-      font-weight: 600;
+      font-weight: 400;
       font-size: 20px;
       line-height: 28px;
     }
@@ -23,7 +23,7 @@
       font-size: 45px;
       line-height: 56px;
       font-weight: 500;
-      margin-bottom: 16px;
+      width: 50%;
     }
 
     .description {
@@ -44,7 +44,7 @@
   }
 
   .img {
-    width: 62%;
+    width: 52%;
     @include flex-center;
   }
 }

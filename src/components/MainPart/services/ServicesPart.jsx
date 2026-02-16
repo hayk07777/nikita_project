@@ -10,7 +10,7 @@ export const ServicesPart = () => {
       <div className={styles.wrapper}>
         <div className={styles.card}>
           <img src={Card1Pic} alt="card1" />
-          <h2 className={styles.title}>ՍՄՍ և Վեբ</h2>
+          <h2 className={styles.titleCards}>ՍՄՍ և Վեբ</h2>
           <p className={styles.about}>
             Բաժանորդներին հնարավորություն է տրվում հաղորդագրություն ուղարկել և՛
             SMS-ի միջոցով, և՛ WEB կայքով:
