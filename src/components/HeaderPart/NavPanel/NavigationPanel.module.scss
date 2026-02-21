@@ -1,26 +1,38 @@
 @use "../../../modules" as *;
 
-.wrapper{
+.wrapper {
   position: fixed;
   top: 50px;
   z-index: 10;
   transition: $tr-300;
   width: 100%;
-  &.scrolled{
-    top:0;
+  &.scrolled {
+    top: 0;
+    .container {
+      margin-top: -1px;
+      background-color: $white;
+    }
   }
   .container {
-    max-width: $max-width;
-    margin: 0 auto;
-    @include flex-center(row, 15px);
-    justify-content: space-between;
-    
+    @include container;
+    @include flex-center;
+
     padding: 15px;
-    background: $white;
-  
-    
+
     .logo img {
       width: 130px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .container {
+      @include flex-center;
+      background-color: $white;
+      justify-content: space-between;
+      margin-top: 90px;
+    }
+
+    .tellNum {
+      display: none;
     }
   }
 }
@@ -36,19 +48,18 @@
     padding: 0;
     gap: 25px;
 
-
     li {
       a {
         text-decoration: none;
         font-size: 14px;
-        color: #1F1F1F;
+        color: #1f1f1f;
         font-weight: 500;
         transition: color $tr-300;
 
         &:hover {
           color: $primary;
         }
-        
+
         &.active {
           color: $primary;
         }
@@ -56,19 +67,17 @@
     }
   }
 
-
-
-  @media (max-width: 1024px) {
-
+  @media screen and (max-width: 1024px) {
     position: fixed;
-    top: 70px;
+    height: 100vh;
+    top: 0;
     left: -100%;
     flex-direction: column;
     background-color: $white;
     width: 100%;
     text-align: center;
     transition: 0.4s;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     padding: 40px 0;
     z-index: 999;
 
@@ -86,29 +95,39 @@
 .desktop {
   @include flex-center(row, 10px);
   flex-wrap: nowrap;
+  span {
+    cursor: pointer;
+
+    @include flex-center($gap: 10px);
+    img {
+      padding: 6px 1px;
+    }
+  }
 
   .langDropdown {
-    position: relative; 
+    position: relative;
     cursor: pointer;
 
     p {
+      @include flex-center;
       background: $primary-light;
       color: $primary;
-      padding: 5px 10px;
+      width: 40px;
+      height: 40px;
       border-radius: 5px;
       margin: 0;
-      font-weight: 600;
+      font-weight: 400;
       transition: $tr-300;
     }
 
     .dropdownContent {
-      display: none; 
+      display: none;
       position: absolute;
-      top: 100%; 
+      top: 100%;
       left: 0;
       background-color: $white;
       min-width: 60px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       padding: 5px 0;
       z-index: 10;
@@ -151,10 +170,7 @@
     font-size: 14px;
     font-weight: 500;
   }
-
- 
 }
-//CHMORANAS STE DVIJENI UNES HAYK PTI DZVCVI
 
 .burger {
   display: none;
@@ -169,35 +185,8 @@
     transition: 0.3s;
   }
 
-  @media (max-width: 1024px) {
-    display: flex;
-
-    &.active {
-      .bar {
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        &:nth-child(1) {
-          transform: translateY(8px) rotate(45deg);
-        }
-        &:nth-child(3) {
-          transform: translateY(-8px) rotate(-45deg);
-        }
-      }
-    }
-  }
-}
-
-.mobile {
-  display: none;
-
-  @media (max-width: 1024px) {
-    @include flex-center(column, 15px);
-    margin-top: 145px;
-  }
-}
-
-.overlay {
+  
+  .overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -210,4 +199,22 @@
     opacity: 1;
     pointer-events: all;
   }
+}
+@media (max-width: 1024px) {
+  display: flex;
+
+  &.active {
+    .bar {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
 }

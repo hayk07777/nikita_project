@@ -1,5 +1,5 @@
 import styles from "./ContactWithUs.module.scss";
-import {FlagPic} from "../../../assets/images/index"
+import { FlagPic } from "../../../assets/images/index";
 
 export const ContactWithUs = () => {
   return (
@@ -74,7 +74,6 @@ export const ContactWithUs = () => {
             <div className={styles.field}>
               <label htmlFor="content">Բովանդակություն*</label>
               <textarea
-             
                 id="content"
                 name="content"
                 placeholder="Բովանդակություն"

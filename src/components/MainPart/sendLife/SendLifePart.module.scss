@@ -1,72 +1,111 @@
 @use "../../../modules" as *;
 
 .container {
-  padding-block: 80px;
   @include container;
-  @include flex-center;
+  @include flex-center();
+  justify-content: space-between;
+  padding-block: 80px;
+  gap: 40px;
 
-  .content {
-    @include flex-center(column);
-    width: 100%;
+  .imageSide {
+    flex: 0 0 55%;
+    display: flex;
+    justify-content: center;
 
-    .containerCards {
-      @include flex-center;
-      width: 100%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 
-      .image {
-        width: 59%;
-        
-        img {
-          max-width: 100%;
-          height: auto;
+  .textSide {
+    flex: 0 0 40%;
+
+    .step {
+      margin-bottom: 16px;
+
+      span {
+        padding: 6px 14px;
+        background: #ffc107;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
+
+    .title {
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: $text-main;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: $text-secondary;
+      margin-bottom: 24px;
+    }
+
+    .list {
+      margin-bottom: 40px;
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        color: $text-secondary;
+        font-size: 18px;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
         }
       }
+    }
 
-      .codeContainer {
-        width: 41%;
+    .btn {
+      @include btnMobile();
+    }
 
-        .step {
-          margin-bottom: 12px;
-          span {
-            padding: 5px;
-            background: #ffc107;
-            line-height: 20px;
-            border-radius: 20px;
-            font-weight: 500;
-            font-size: 14px;
-          }
-        }
+    .btnMobile {
+      display: none;
+    }
+  }
+}
 
-        .rightTitle {
-          .title {
-            font-size: 36px;
-            line-height: 44px;
-            margin-bottom: 16px;
-            font-weight: 500;
-          }
-        }
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding-block: 40px;
 
-        .about {
-          p {
-            color: $text-secondary;
-            line-height: 26px;
-            font-weight: 400;
-            margin-bottom: 16px;
-            font-size: 18px;
-          }
-        }
+    .imageSide,
+    .textSide {
+      flex: 0 0 100%;
+      width: 100%;
+    }
 
-        .list {
-          margin-bottom: 40px;
-          li {
-            margin-bottom: 4px;
-            color: $text-secondary;
-            list-style: none;
-          }
-        }
+    .textSide {
+      .btn {
+        display: none;
+      }
 
-        .btn {
-          @include moreLearnBtn;
+      .btnMobile {
+        display: flex;
+        @include btnMobile($fullWidth: true);
+        margin-top: 20px;
+      }
+
+      .list li {
+        padding-left: 0;
+
+        &::before {
+          display: none;
         }
       }
     }

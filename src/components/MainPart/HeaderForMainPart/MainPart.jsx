@@ -1,5 +1,5 @@
 import styles from "./MainPart.module.scss";
-import { PausePic,Girl1Pic } from "../../../assets/images/index";
+import { PausePic, Girl1Pic } from "../../../assets/images/index";
 
 export const MainPart = () => {
   return (
@@ -13,19 +13,32 @@ export const MainPart = () => {
           <p className={styles.description}>
             <span className={styles.firstWord}>
               Բարձրացրեք ձեր վաճառքների ճանապարհը՝
-            </span>{" "}
+            </span>
             <span className={styles.secondWord}>
               արդյունավետ հաղորդակցությամբ յուրաքանչյուր
-            </span>{" "}
-            <span className={styles.thirdWord}>քայլում։</span>
+            </span>
+            <span className={styles.thirdWord}>քայլում։ </span>
           </p>
+
+          <p className={styles.descriptionMobile}>
+            <span className={styles.firstWord}>
+              Բարձրացրեք ձեր վաճառքների ճանապարհը՝արդյունավետ
+            </span>
+            <span className={styles.secondWord}>
+              հաղորդակցությամբ յուրաքանչյուր
+            </span>
+            <span className={styles.thirdWord}>քայլում։ </span>
+          </p>
+
           <div className={styles.headerBtn}>
             <button className={styles.btnAnim}>Կապ մեզ հետ </button>
+
             <div className={`${styles.pause} ${styles.animePause} `}>
               <img src={PausePic} alt="pause" />
             </div>
           </div>
         </div>
+
         <div className={styles.imgCont}>
           <img src={Girl1Pic} alt="firstGirl" className={styles.girl} />
         </div>

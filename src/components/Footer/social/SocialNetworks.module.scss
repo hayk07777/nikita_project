@@ -1,28 +1,69 @@
 @use "../../../modules" as *;
 
-.container{
-    @include flex-center;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    background-color: #F9F9FD;
-    max-width: $max-width;
-    margin: 0 auto;
-    .textsContainer{
-        width: 80%;
-      p{
-        font-size: 14px;
-        line-height: 20px;
-        color: $text-secondary;
-        span{
-            color: black;
-            font-weight: 600;
+.container {
+  @include flex-center;
+  @include container;
+  justify-content: space-between;
+  background-color: #f9f9fd;
+  
+  padding: 24px 0;
+
+  .textsContainer {
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: $text-secondary;
+      margin: 0;
+
+      span {
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .iconsContainer {
+    @include flex-center($gap: 24px);
+    a {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      
+      img {
+        transition: 0.4s ;
+          opacity: 0.4;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+      &:hover{
+        img{
+          opacity: 1;
         }
       }
     }
-    .iconsContainer{
-        width: 20%;
-        @include flex-center;
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 24px;
+    padding: 40px 16px;
+    text-align: center;
+
+    .textsContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
+
+    .iconsContainer {
+      width: 100%;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
 }

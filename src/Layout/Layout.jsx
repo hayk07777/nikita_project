@@ -1,14 +1,13 @@
-import { MainComponents } from "../components/MainPart/MainComponents"
-import { Footer } from "../components/Footer/Footer"
-import { Header } from "../components/HeaderPart/Header/Header"
+import { MainComponents } from "../components/MainPart/MainComponents";
+import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/HeaderPart/Header/Header";
 
 export const Layout = () => {
   return (
     <div>
-      <Header/>
-      <MainComponents/>
-      <Footer/>
-       
+      <Header />
+      <MainComponents />
+      <Footer />
     </div>
-  )
-}
+  );
+};

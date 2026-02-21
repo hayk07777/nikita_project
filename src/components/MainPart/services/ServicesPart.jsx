@@ -1,11 +1,9 @@
 import styles from "./ServicesPart.module.scss";
-import { Card1Pic,Card2Pic,Card3Pic } from "../../../assets/images/index";
+import { Card1Pic, Card2Pic, Card3Pic } from "../../../assets/images/index";
 export const ServicesPart = () => {
   return (
     <section className={styles.container} id="services">
-      <div className={styles.title}>
-        Մեր ծառայությունները 🚀
-      </div>
+      <div className={styles.title}>Մեր ծառայությունները 🚀</div>
 
       <div className={styles.wrapper}>
         <div className={styles.card}>

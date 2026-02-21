@@ -14,7 +14,7 @@ export const NeedText = () => {
         <button className={styles.btn}>Իմանալ ավելին</button>
       </div>
       <div className={styles.img}>
-        <img src={CommandPic}  alt="commandPic" />
+        <img src={CommandPic} alt="commandPic" />
       </div>
     </section>
   );

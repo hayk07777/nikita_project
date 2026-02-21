@@ -1,42 +1,34 @@
 import styles from "./SendLifePart.module.scss";
 import { InpPic } from "../../../assets/images/index";
+
 export const SendLifePart = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.containerCards}>
-          <div className={styles.image}>
-            <img src={InpPic} alt="Form"  />
-          </div>
+      <div className={styles.imageSide}>
+        <img src={InpPic} alt="Form Illustration" />
+      </div>
 
-          <div className={styles.codeContainer}>
-            <div className={styles.step}>
-              <span>Քայլ 2</span>
-            </div>
-            <div className={styles.rightTitle}>
-              <h2 className={styles.title}>Մուտքագրեք ծածկագիրը մեր պլատֆորմում</h2>
-            </div>
-            <div className={styles.about}>
-              
-              
-              <p>
-                Mobile ID-ն անձի նույնականացման, ինչպես նաև էլեկտրոնային
-                եղանակով ստորագրելու հարթակ է: Համակարգը հնարավորություն է տալիս
-                ստորագրել ցանկացած փաստաթուղթ առանց հավելյալ ջանքերի:
-              </p>
-            </div>
-            <div>
-              <ul className={styles.list}>
-                <li>• Ուղարկել SMS կարճ համարին</li>
-                <li>• Ուղարկել կոդը "պլատֆորմով"</li>
-              </ul>
-            </div>
-            <button className={styles.btn}>Իմանալ ավելին</button>
-          </div>
+      <div className={styles.textSide}>
+        <div className={styles.step}>
+          <span>Քայլ 2</span>
         </div>
 
+        <h2 className={styles.title}>Մուտքագրեք ծածկագիրը մեր պլատֆորմում</h2>
+
+        <p className={styles.description}>
+          Mobile ID-ն անձի նույնականացման, ինչպես նաև էլեկտրոնային եղանակով
+          ստորագրելու հարթակ է: Համակարգը հնարավորություն է տալիս ստորագրել
+          ցանկացած փաստաթուղթ առանց հավելյալ ջանքերի:
+        </p>
+
+        <ul className={styles.list}>
+          <li>Ուղարկել SMS կարճ համարին</li>
+          <li>Ուղարկել կոդը "պլատֆորմով"</li>
+        </ul>
+
+        <button className={styles.btn}>Իմանալ ավելին</button>
+        <button className={styles.btnMobile}>Իմանալ ավելին</button>
       </div>
     </section>
   );
-  
 };
