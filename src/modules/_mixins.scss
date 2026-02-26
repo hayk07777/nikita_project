@@ -9,20 +9,17 @@
   flex-wrap: wrap;
 }
 
-@mixin btn-outline($color: $primary) {
+@mixin btn-outline($color: $primary, $background: transparent) {
   padding: 12px 35px;
   border: 1px solid $color;
-  background: transparent;
+  background: $background;
   color: $color;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: $tr-300;
 
-  &:hover {
-    background: $color;
-    color: white;
-  }
+ 
 }
 
 @mixin tablet {

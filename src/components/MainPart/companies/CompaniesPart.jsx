@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import styles from "./CompaniesPart.module.scss";
@@ -16,6 +16,7 @@ import {
 
 export const CompaniesPart = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [swiperRef, setSwiperRef] = useState(null);
 
   const logos = [
     { src: FacebookLogo, alt: "facebook" },
@@ -37,15 +38,21 @@ export const CompaniesPart = () => {
 
       <div className={styles.sliderWrapper}>
         <Swiper
-          modules={[Autoplay, Pagination]}
+          modules={[Autoplay]}
+          onSwiper={setSwiperRef}
           spaceBetween={20}
           slidesPerView={2}
+          loop={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          autoplay={{ delay: 3000 }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false
+          }}
           breakpoints={{
             768: { slidesPerView: 4 },
             1024: { slidesPerView: 5 },
           }}
+          className={styles.mySwiper}
         >
           {logos.map((logo, index) => (
             <SwiperSlide key={index} className={styles.slide}>
@@ -59,6 +66,7 @@ export const CompaniesPart = () => {
             <span
               key={index}
               className={`${styles.dot} ${activeIndex === index ? styles.active : ""}`}
+              onClick={() => swiperRef?.slideToLoop(index)}
             />
           ))}
         </div>

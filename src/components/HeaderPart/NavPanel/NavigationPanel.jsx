@@ -33,31 +33,11 @@ export const NavigationPanel = () => {
 
         <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
           <ul className={styles.list}>
-            <li>
-              <a href="#services" onClick={closeMenu}>
-                Մեր ծառայությունները
-              </a>
-            </li>
-            <li>
-              <a href="#how-it-works" onClick={closeMenu}>
-                Ինչպես է դա աշխատում
-              </a>
-            </li>
-            <li>
-              <a href="#about" onClick={closeMenu}>
-                Մեր մասին
-              </a>
-            </li>
-            <li>
-              <a href="#partners" onClick={closeMenu}>
-                Գործընկերներ
-              </a>
-            </li>
-            <li>
-              <a href="#contact" onClick={closeMenu}>
-                Կապ մեզ հետ
-              </a>
-            </li>
+            <li><a href="#services" onClick={closeMenu}>Մեր ծառայությունները</a></li>
+            <li><a href="#how-it-works" onClick={closeMenu}>Ինչպես է դա աշխատում</a></li>
+            <li><a href="#about" onClick={closeMenu}>Մեր մասին</a></li>
+            <li><a href="#partners" onClick={closeMenu}>Գործընկերներ</a></li>
+            <li><a href="#contact" onClick={closeMenu}>Կապ մեզ հետ</a></li>
           </ul>
         </div>
 
@@ -65,31 +45,24 @@ export const NavigationPanel = () => {
           <div className={styles.langDropdown}>
             <p>ՀՅ</p>
             <div className={styles.dropdownContent}>
-              <button>RU</button>
-              <button>EN</button>
+              <span>RU</span>
+              <span>EN</span>
             </div>
           </div>
-          <span>
-            {" "}
+          <button className={styles.tellBtn}>
             <img src={TelIcon} alt="TelIcon" />
             <p className={styles.tellNum}>{telNum}</p>
-          </span>
+          </button>
         </div>
 
-        <div
-          className={`${styles.burger} ${isOpen ? styles.active : ""}`}
-          onClick={toggleMenu}
-        >
+        <div className={`${styles.burger} ${isOpen ? styles.active : ""}`} onClick={toggleMenu}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
         </div>
       </nav>
 
-      <div
-        className={`${styles.overlay} ${isOpen ? styles.active : ""}`}
-        onClick={closeMenu}
-      ></div>
+      <div className={`${styles.overlay} ${isOpen ? styles.active : ""}`} onClick={closeMenu}></div>
     </div>
   );
 };

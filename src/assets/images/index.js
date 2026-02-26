@@ -6,7 +6,7 @@ export { default as LinkedInIcon } from "./icons/LinkedInIcon.svg";
 export { default as TikTokIcon } from "./icons/TikTokIcon.svg";
 export { default as YouTubeIcon } from "./icons/YouTubeIcon.svg";
 export { default as TelIcon } from "./icons/TelIcon.svg";
-
+export {default as RightIcon} from "./icons/RightIcon.svg";
 //Logo
 export { default as EurovisionLogo } from "./logo/EurovisionLogo.svg";
 export { default as FacebookLogo } from "./logo/FacebookLogo.svg";

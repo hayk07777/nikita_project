@@ -6,63 +6,56 @@
   z-index: 10;
   transition: $tr-300;
   width: 100%;
+
   &.scrolled {
     top: 0;
+
     .container {
       margin-top: -1px;
       background-color: $white;
     }
   }
+
   .container {
     @include container;
-    @include flex-center;
-
+    @include flex-center(row, space-between);
     padding: 15px;
 
     .logo img {
-      width: 130px;
+      max-width: 130px;
     }
   }
-  @media screen and (max-width: 1024px) {
-    .container {
-      @include flex-center;
-      background-color: $white;
-      justify-content: space-between;
-      margin-top: 90px;
-    }
 
-    .tellNum {
-      display: none;
+  @media screen and (max-width: 1024px) {
+    top: 130px;
+
+    .container {
+      margin-top: 0;
+      background-color: $white;
     }
   }
 }
+
 .menu {
   @include flex-center;
+
   .list {
-    align-items: center;
-    max-width: 780px;
-    height: 30px;
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 25px;
 
-    li {
-      a {
-        text-decoration: none;
-        font-size: 14px;
-        color: #1f1f1f;
-        font-weight: 500;
-        transition: color $tr-300;
+    li a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #1f1f1f;
+      font-weight: 400;
+      transition: color $tr-300;
 
-        &:hover {
-          color: $primary;
-        }
-
-        &.active {
-          color: $primary;
-        }
+      &:hover,
+      &.active {
+        color: $primary;
       }
     }
   }
@@ -72,14 +65,12 @@
     height: 100vh;
     top: 0;
     left: -100%;
-    flex-direction: column;
-    background-color: $white;
     width: 100%;
-    text-align: center;
+    background-color: $white;
+    flex-direction: column;
     transition: 0.4s;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    padding: 40px 0;
     z-index: 999;
+    padding: 80px 0;
 
     &.open {
       left: 0;
@@ -87,22 +78,13 @@
 
     .list {
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
     }
   }
 }
 
 .desktop {
   @include flex-center(row, 10px);
-  flex-wrap: nowrap;
-  span {
-    cursor: pointer;
-
-    @include flex-center($gap: 10px);
-    img {
-      padding: 6px 1px;
-    }
-  }
 
   .langDropdown {
     position: relative;
@@ -114,10 +96,7 @@
       color: $primary;
       width: 40px;
       height: 40px;
-      border-radius: 5px;
-      margin: 0;
-      font-weight: 400;
-      transition: $tr-300;
+      border-radius: 8px;
     }
 
     .dropdownContent {
@@ -129,18 +108,12 @@
       min-width: 60px;
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
-      padding: 5px 0;
-      z-index: 10;
 
-      button {
-        width: 100%;
+      span {
+        display: block;
         padding: 8px 10px;
-        background: none;
-        border: none;
         color: $text-secondary;
         font-size: 14px;
-        cursor: pointer;
-        transition: $tr-300;
         text-align: center;
 
         &:hover {
@@ -150,25 +123,30 @@
       }
     }
 
-    &:hover {
-      .dropdownContent {
-        display: block;
-      }
-      p {
-        background: $primary;
-        color: $white;
-      }
+    &:hover .dropdownContent {
+      display: block;
     }
   }
 
-  span {
-    max-width: 200px;
-    border: 1px solid $border-color;
+  .tellBtn {
+    @include flex-center;
+    background-color: transparent;
+    border: 1px solid $primary;
     color: $primary;
-    padding: 5px 15px;
+    width: 166px;
+    height: 40px;
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;
+    cursor: pointer;
+
+    @media screen and (max-width: 1024px) {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+
+      .tellNum {
+        display: none;
+      }
+    }
   }
 }
 
@@ -177,6 +155,7 @@
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
+  z-index: 1000;
 
   .bar {
     width: 25px;
@@ -185,8 +164,27 @@
     transition: 0.3s;
   }
 
-  
-  .overlay {
+  &.active {
+    .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    
+  }
+}
+
+.overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -199,22 +197,4 @@
     opacity: 1;
     pointer-events: all;
   }
-}
-@media (max-width: 1024px) {
-  display: flex;
-
-  &.active {
-    .bar {
-      &:nth-child(2) {
-        opacity: 0;
-      }
-      &:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      &:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-    }
-  }
-}
 }
