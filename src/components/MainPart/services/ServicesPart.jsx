@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -19,9 +19,13 @@ export const ServicesPart = () => {
 
       <div className={styles.wrapper}>
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={1.1}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: true,
+          }}
           pagination={{
             clickable: true,
             el: `.${styles.paginationContainer}`,
@@ -29,9 +33,10 @@ export const ServicesPart = () => {
             bulletActiveClass: styles.bulletActive,
           }}
           breakpoints={{
-            1050: {
+            1024: {
               slidesPerView: 3,
               allowTouchMove: false,
+
             },
           }}
           className={styles.mySwiper}

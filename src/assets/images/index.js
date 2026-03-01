@@ -7,6 +7,16 @@ export { default as TikTokIcon } from "./icons/TikTokIcon.svg";
 export { default as YouTubeIcon } from "./icons/YouTubeIcon.svg";
 export { default as TelIcon } from "./icons/TelIcon.svg";
 export {default as RightIcon} from "./icons/RightIcon.svg";
+export {default as ArrowTopIcon} from "./icons/ArrowTopIcon.svg";
+export {default as HeartIcon} from "./icons/HeartIcon.svg";
+export {default as SmsIcon} from "./icons/SmsIcon.svg";
+export {default as ChekedIcon} from "./icons/ChekedIcon.svg";
+
+
+
+
+
+
 //Logo
 export { default as EurovisionLogo } from "./logo/EurovisionLogo.svg";
 export { default as FacebookLogo } from "./logo/FacebookLogo.svg";
@@ -16,6 +26,9 @@ export { default as TeamLogo } from "./logo/TeamLogo.svg";
 export { default as UcomLogo } from "./logo/UcomLogo.svg";
 export { default as VivaLogo } from "./logo/VivaLogo.svg";
 export { default as FirmaLogo } from "./logo/FirmaLogo.svg";
+
+
+
 
 //pictures
 export { default as Boy2Pic } from "./picture/Boy2.png";
@@ -33,3 +46,6 @@ export { default as OperatorsPic } from "./picture/Operators.png";
 export { default as PausePic } from "./picture/Pause.png";
 export { default as SmsPic } from "./picture/Sms.png";
 export { default as TelephonePic } from "./picture/Telephone.png";
+export { default as GroupImg1 } from "./picture/GroupImg1.png";
+export { default as GroupImg2 } from "./picture/GroupImg2.png";
+export { default as GroupImg3 } from "./picture/GroupImg3.png";

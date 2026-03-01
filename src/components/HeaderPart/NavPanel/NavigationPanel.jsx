@@ -5,24 +5,20 @@ import { FirmaLogo, TelIcon } from "../../../assets/images/index";
 export const NavigationPanel = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  let telNum = "+374 55 12 34 56";
+  const telNum = "+374 55 12 34 56";
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <div className={`${styles.wrapper} ${isScrolled ? styles.scrolled : ""}`}>
@@ -32,6 +28,11 @@ export const NavigationPanel = () => {
         </a>
 
         <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
+          <div className={styles.closeBtn} onClick={closeMenu}>
+            <span></span>
+            <span></span>
+          </div>
+
           <ul className={styles.list}>
             <li><a href="#services" onClick={closeMenu}>Մեր ծառայությունները</a></li>
             <li><a href="#how-it-works" onClick={closeMenu}>Ինչպես է դա աշխատում</a></li>
@@ -55,14 +56,17 @@ export const NavigationPanel = () => {
           </button>
         </div>
 
-        <div className={`${styles.burger} ${isOpen ? styles.active : ""}`} onClick={toggleMenu}>
+        <div className={styles.burger} onClick={toggleMenu}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
         </div>
       </nav>
 
-      <div className={`${styles.overlay} ${isOpen ? styles.active : ""}`} onClick={closeMenu}></div>
+      <div
+        className={`${styles.overlay} ${isOpen ? styles.active : ""}`}
+        onClick={closeMenu}
+      ></div>
     </div>
   );
 };

@@ -1,10 +1,8 @@
 @use "../../../modules" as *;
 
-.section {
-  padding: 60px 0;
-  max-width: $max-width;
-  margin: 0 auto;
 
+.section {
+ @include container;
   .container {
     display: flex;
     justify-content: space-between;
@@ -63,14 +61,14 @@
     textarea {
       width: 100%;
       padding: 12px 16px;
-      border: 1px solid #dcdcdc;
+      border: 1px solid #A5A9B0;
       border-radius: 8px;
       font-size: 16px;
       outline: none;
       transition: border-color 0.3s ease;
 
       &::placeholder {
-        color: #bfbfbf;
+        color: #A5A9B0;
       }
 
       &:focus {
@@ -87,13 +85,13 @@
   .phoneInput {
     display: flex;
     align-items: center;
-    border: 1px solid #dcdcdc;
+    border: 1px solid #A5A9B0;
     border-radius: 8px;
     overflow: hidden;
 
     .wrapperDropdown {
       position: relative;
-      border-right: 1px solid #dcdcdc;
+      border-right: 1px solid #A5A9B0;
       background-color: #fff;
 
       .dropdownBtn {
@@ -123,7 +121,7 @@
         top: 100%;
         left: 0;
         background: #fff;
-        border: 1px solid #dcdcdc;
+        border: 1px solid #A5A9B0;
         z-index: 10;
         min-width: 100%;
       }

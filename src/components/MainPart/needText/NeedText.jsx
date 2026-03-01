@@ -1,5 +1,6 @@
 import styles from "./NeedText.module.scss";
-import { CommandPic } from "../../../assets/images/index";
+import { GroupImg1, GroupImg2, GroupImg3, HeartIcon, SmsIcon, ChekedIcon } from "../../../assets/images/index";
+
 export const NeedText = () => {
   return (
     <section className={styles.section}>
@@ -13,8 +14,15 @@ export const NeedText = () => {
         </p>
         <button className={styles.btn}>Իմանալ ավելին</button>
       </div>
-      <div className={styles.img}>
-        <img src={CommandPic} alt="commandPic" />
+      <div className={styles.imgContainer}>
+        <img src={GroupImg1} alt="GroupImg1" />
+        <img src={GroupImg2} alt="GroupImg2" />
+        <img src={GroupImg3} alt="GroupImg3" />
+  <div className={styles.icons}>
+          <img src={HeartIcon} alt="HeartIcon" />
+          <img src={SmsIcon} alt="SmsIcon" />
+          <img src={ChekedIcon} alt="ChekedIcon" />
+  </div>
       </div>
     </section>
   );

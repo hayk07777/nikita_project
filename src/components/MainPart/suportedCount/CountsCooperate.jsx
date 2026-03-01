@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "./CountsCooperate.module.scss";
+import { ArrowTopIcon } from "../../../assets/images";
 
 export const CountsCooperate = () => {
   const [btnTop, setBtnTop] = useState(false);
@@ -38,7 +39,7 @@ export const CountsCooperate = () => {
         onClick={scrollToTop}
         className={`${style.scrollTop} ${btnTop ? style.visible : ""}`}
       >
-        ˄
+        <img src={ArrowTopIcon} alt="ArrowTopIcon" />
       </button>
     </section>
   );
