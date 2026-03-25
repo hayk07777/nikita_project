@@ -19,6 +19,7 @@
       text-align: center;
       color: $white;
       margin-bottom: 16px;
+      padding-block: 4px;
     }
 
     .title {
@@ -54,15 +55,27 @@
 
   .imgCont {
     width: calc(51% - 25px);
+    display: flex;
+    justify-content: center;
+
+    .video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+    }
   }
 }
-@media screen and (max-width:1024px) {
+
+@media screen and (max-width: 1024px) {
   .container {
     flex-direction: column-reverse;
+    gap: 30px;
 
     .texts {
       width: 100%;
-
       .btn {
         width: 100%;
       }

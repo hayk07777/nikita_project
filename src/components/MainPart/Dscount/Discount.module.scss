@@ -8,6 +8,17 @@
   .img {
     width: calc(48% - 60px);
     max-height: 572px;
+    display: flex;
+    justify-content: center;
+
+    .discountVideo {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+    }
   }
 
   .texts {
@@ -62,16 +73,21 @@
     }
   }
 }
-@media screen and (max-width:1024px){
-  .container{
+
+@media screen and (max-width: 1024px) {
+  .container {
     flex-direction: column;
-    .texts{
+    gap: 40px;
+
+    .texts {
       width: 100%;
-      .btn{
+
+      .btn {
         width: 100%;
       }
     }
-    .img{
+
+    .img {
       width: 100%;
     }
   }

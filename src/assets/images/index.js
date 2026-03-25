@@ -49,3 +49,12 @@ export { default as TelephonePic } from "./picture/Telephone.png";
 export { default as GroupImg1 } from "./picture/GroupImg1.png";
 export { default as GroupImg2 } from "./picture/GroupImg2.png";
 export { default as GroupImg3 } from "./picture/GroupImg3.png";
+
+
+
+
+//gifs
+export {default as  first} from "./anim/first.webm";
+export {default as  second} from "./anim/second.webm";
+export {default as  third} from "./anim/third.webm";
+export {default as  forth} from "./anim/forth.webm";

@@ -1,6 +1,16 @@
+import { useRef } from "react";
 import styles from "./Discount.module.scss";
-import { Boy2Pic } from "../../../assets/images/index";
+import { second } from "../../../assets/images/index";
+
 export const Discount = () => {
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <section className={styles.container} id="how-it-works">
       <div className={styles.texts}>
@@ -17,10 +27,16 @@ export const Discount = () => {
           <button className={styles.btn}>Իմանալ ավելին</button>
         </div>
       </div>
+
       <div className={styles.img}>
-        <div>
-          <img src={Boy2Pic} alt="boy" />
-        </div>
+        <video 
+          ref={videoRef}
+          src={second} 
+          className={styles.discountVideo}
+          muted 
+          playsInline
+          onMouseEnter={handleMouseEnter}
+        />
       </div>
     </section>
   );

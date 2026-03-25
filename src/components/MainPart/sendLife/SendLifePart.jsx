@@ -1,11 +1,27 @@
+import { useRef } from "react";
 import styles from "./SendLifePart.module.scss";
-import { InpPic } from "../../../assets/images/index";
+import { third } from "../../../assets/images/index";
 
 export const SendLifePart = () => {
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.imageSide}>
-        <img src={InpPic} alt="Form Illustration" />
+        <video
+          ref={videoRef}
+          src={third}
+          className={styles.video}
+          muted
+          playsInline
+          onMouseEnter={handleMouseEnter}
+        />
       </div>
 
       <div className={styles.textSide}>

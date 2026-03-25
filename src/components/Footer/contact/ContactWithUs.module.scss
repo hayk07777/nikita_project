@@ -1,8 +1,9 @@
 @use "../../../modules" as *;
 
-
 .section {
- @include container;
+  @include container;
+  padding-block: 80px;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -203,11 +204,9 @@
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
-      iframe {
-        width: 100%;
-        height: 720px;
-        border: none;
-      }
+     
+      filter: grayscale(100%);
+
     }
   }
 }
@@ -232,7 +231,7 @@
       gap: 20px;
     }
 
-    .mapSide .mapWrapper iframe {
+    .mapSide .mapWrapper {
       height: 450px;
     }
 

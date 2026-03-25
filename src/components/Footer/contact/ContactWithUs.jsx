@@ -1,7 +1,7 @@
 import styles from "./ContactWithUs.module.scss";
 import { FlagPic } from "../../../assets/images/index";
-import { YMaps, Map, Placemark, FullscreenControl, TypeSelector } from 'react-yandex-maps'; 
-
+import { YMaps, Map, Placemark, FullscreenControl, TypeSelector } from 'react-yandex-maps';
+import { Checkbox } from 'antd';
 
 export const ContactWithUs = () => {
   return (
@@ -20,32 +20,17 @@ export const ContactWithUs = () => {
             <div className={styles.row}>
               <div className={styles.field}>
                 <label htmlFor="firstName">Անուն*</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="Անուն"
-                />
+                <input type="text" id="firstName" name="firstName" placeholder="Անուն" />
               </div>
               <div className={styles.field}>
                 <label htmlFor="lastName">Ազգանուն*</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  placeholder="Ազգանուն"
-                />
+                <input type="text" id="lastName" name="lastName" placeholder="Ազգանուն" />
               </div>
             </div>
 
             <div className={styles.field}>
               <label htmlFor="email">Էլ. փոստ*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Էլ. փոստ"
-              />
+              <input type="email" id="email" name="email" placeholder="Էլ. փոստ" />
             </div>
 
             <div className={styles.field}>
@@ -64,49 +49,26 @@ export const ContactWithUs = () => {
                     </div>
                   </div>
                 </div>
-                <input
-                  id="telephone"
-                  name="telephone"
-                  type="number"
-                  placeholder="** ** ** **"
-                />
+                <input id="telephone" name="telephone" type="number" placeholder="** ** ** **" />
               </div>
             </div>
 
             <div className={styles.field}>
               <label htmlFor="content">Բովանդակություն*</label>
-              <textarea
-                id="content"
-                name="content"
-                placeholder="Բովանդակություն"
-              ></textarea>
+              <textarea id="content" name="content" placeholder="Բովանդակություն"></textarea>
             </div>
 
             <div className={styles.servicesGroup}>
               <h3>Ծառայություններ</h3>
               <div className={styles.checkboxGrid}>
-                <div className={styles.checkItem}>
-                  <input type="checkbox" id="sms" />
-                  <label htmlFor="sms">SMS ծանուցումներ</label>
-                </div>
-                <div className={styles.checkItem}>
-                  <input type="checkbox" id="premium" />
-                  <label htmlFor="premium">Պրեմիում / Կարճ համար</label>
-                </div>
-                <div className={styles.checkItem}>
-                  <input type="checkbox" id="call" />
-                  <label htmlFor="call">Զանգերի կենտրոն</label>
-                </div>
-                <div className={styles.checkItem}>
-                  <input type="checkbox" id="other" />
-                  <label htmlFor="other">Այլ</label>
-                </div>
+                <Checkbox className={styles.antdCheckbox}>SMS ծանուցումներ</Checkbox>
+                <Checkbox className={styles.antdCheckbox}>Պրեմիում / Կարճ համար</Checkbox>
+                <Checkbox className={styles.antdCheckbox}>Զանգերի կենտրոն</Checkbox>
+                <Checkbox className={styles.antdCheckbox}>Այլ</Checkbox>
               </div>
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
-              Ուղարկել
-            </button>
+            <button type="submit" className={styles.submitBtn}>Ուղարկել</button>
           </form>
         </div>
 
@@ -121,7 +83,6 @@ export const ContactWithUs = () => {
                 }}
                 width="100%"
                 height="720px"
-              
               >
                 <Placemark geometry={[40.1811, 44.5265]} />
                 <FullscreenControl options={{ position: { bottom: 28, right: 26 } }} />

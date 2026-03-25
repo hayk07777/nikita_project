@@ -1,6 +1,16 @@
+import { useRef } from "react";
 import styles from "./GetGiftPart.module.scss";
-import { HecoPic } from "../../../assets/images/index";
+import { forth } from "../../../assets/images/index";
+
 export const GetGiftPart = () => {
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.texts}>
@@ -13,8 +23,16 @@ export const GetGiftPart = () => {
         </p>
         <button className={styles.btn}>Իմանալ ավելին</button>
       </div>
+
       <div className={styles.imgCont}>
-        <img src={HecoPic} alt="heco" />
+        <video
+          ref={videoRef}
+          src={forth}
+          className={styles.video}
+          muted
+          playsInline
+          onMouseEnter={handleMouseEnter}
+        />
       </div>
     </section>
   );
