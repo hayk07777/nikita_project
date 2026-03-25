@@ -12,6 +12,7 @@
     "react-dom": "^19.2.3",
     "react-router-dom": "^7.11.0",
     "react-scripts": "5.0.1",
+    "react-yandex-maps": "^4.6.0",
     "sass": "^1.97.3",
     "server": "^1.0.42",
     "swiper": "^12.1.2",

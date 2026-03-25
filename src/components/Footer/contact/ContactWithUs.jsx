@@ -1,5 +1,7 @@
 import styles from "./ContactWithUs.module.scss";
 import { FlagPic } from "../../../assets/images/index";
+import { YMaps, Map, Placemark, FullscreenControl, TypeSelector } from 'react-yandex-maps'; 
+
 
 export const ContactWithUs = () => {
   return (
@@ -110,10 +112,22 @@ export const ContactWithUs = () => {
 
         <div className={styles.mapSide}>
           <div className={styles.mapWrapper}>
-            <iframe
-              src="https://yandex.com/map-widget/v1/?l=sat%2Cskl&ll=44.5265,40.1811&z=14"
-              title="Map"
-            ></iframe>
+            <YMaps query={{ apikey: '83841bdc-892a-431f-a9ff-b378ef38c6a0', lang: 'en_RU' }}>
+              <Map
+                defaultState={{
+                  center: [40.1811, 44.5265],
+                  zoom: 15,
+                  controls: [],
+                }}
+                width="100%"
+                height="720px"
+              
+              >
+                <Placemark geometry={[40.1811, 44.5265]} />
+                <FullscreenControl options={{ position: { bottom: 28, right: 26 } }} />
+                <TypeSelector options={{ float: 'right' }} />
+              </Map>
+            </YMaps>
           </div>
         </div>
       </div>
