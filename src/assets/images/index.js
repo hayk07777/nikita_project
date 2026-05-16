@@ -31,21 +31,21 @@ export { default as FirmaLogo } from "./logo/FirmaLogo.svg";
 
 
 //pictures
-export { default as Boy2Pic } from "./picture/Boy2.png";
-export { default as Card1Pic } from "./picture/Card1.png";
-export { default as Card2Pic } from "./picture/Card2.png";
-export { default as Card3Pic } from "./picture/Card3.png";
-export { default as CommandPic } from "./picture/CommandPic.png";
-export { default as CursorPic } from "./picture/Cursor.png";
-export { default as FlagPic } from "./picture/Flag.png";
-export { default as Girl1Pic } from "./picture/Girl1.png";
-export { default as HecoPic } from "./picture/Heco.png";
-export { default as InpPic } from "./picture/Inp.png";
-export { default as InppicPic } from "./picture/Inppic.png";
-export { default as OperatorsPic } from "./picture/Operators.png";
-export { default as PausePic } from "./picture/Pause.png";
-export { default as SmsPic } from "./picture/Sms.png";
-export { default as TelephonePic } from "./picture/Telephone.png";
+export { default as Boy2Pic } from "./picture/boy2.png";
+export { default as Card1Pic } from "./picture/card1.png";
+export { default as Card2Pic } from "./picture/card2.png";
+export { default as Card3Pic } from "./picture/card3.png";
+export { default as CommandPic } from "./picture/commandPic.png";
+export { default as CursorPic } from "./picture/cursor.png";
+export { default as FlagPic } from "./picture/flag.png";
+export { default as Girl1Pic } from "./picture/girl1.png";
+export { default as HecoPic } from "./picture/heco.png";
+export { default as InpPic } from "./picture/inp.png";
+export { default as InppicPic } from "./picture/inppic.png";
+export { default as OperatorsPic } from "./picture/operators.png";
+export { default as PausePic } from "./picture/pause.png";
+export { default as SmsPic } from "./picture/sms.png";
+export { default as TelephonePic } from "./picture/telephone.png";
 export { default as GroupImg1 } from "./picture/GroupImg1.png";
 export { default as GroupImg2 } from "./picture/GroupImg2.png";
 export { default as GroupImg3 } from "./picture/GroupImg3.png";

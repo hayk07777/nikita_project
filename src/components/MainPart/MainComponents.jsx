@@ -1,4 +1,4 @@
-import { Discount } from "./Dscount/Discount";
+import { Discount } from "./discount/Discount";
 import { MainPart } from "./HeaderForMainPart/MainPart";
 import { CompaniesPart } from "./companies/CompaniesPart";
 import { GetGiftPart } from "./getGift/GetGiftPart";

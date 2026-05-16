@@ -25,7 +25,7 @@ export const SendLifePart = () => {
       </div>
 
       <div className={styles.textSide}>
-        <div className={styles.step}>
+        <div className={styles.step} >
           <span>Քայլ 2</span>
         </div>
 
